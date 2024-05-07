@@ -1,0 +1,42 @@
+[core]
+	autocrlf = input
+	pager = delta
+[pull]
+	ff = only
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+	line-numbers = true
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+	features = catppuccin-latte
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[commit]
+	gpgsign = false
+[gpg]
+	format = ssh
+[tag]
+	gpgsign = false
+[interactive]
+    diffFilter = delta --color-only
+[include]
+	path = ~/.config/delta/catppuccin.gitconfig
+# === Environment configurations ===
+# include GitHub configuration as default
+[include]
+  	path = ~/.git-config/.gitconfig-github
+# include GitLab configuration in specific directory
+[includeIf "gitdir:~/Development/repositories/gitlab/"]
+  	path = ~/.git-config/.gitconfig-gitlab-lrz
+# include Forgejo configuration in specific directory
+[includeIf "gitdir:~/Development/repositories/forgejo/"]
+  	path = ~/.git-config/.gitconfig-forgejo
