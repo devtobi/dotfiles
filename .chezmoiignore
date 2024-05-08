@@ -5,9 +5,13 @@
 .cargo
 .conda
 .cups
+.dart
+.dart-tool
 .dartServer
 .devpod
 .docker
+.fleet
+.gradle
 .graphbuddy
 .hawtjni
 .installbuilder
@@ -15,8 +19,13 @@
 .jfrog
 .jfrog-idea-plugin
 .jrebel
+.jupyter
+.krew
+.kube
+.lego
 .local
 .m2
+.minikube
 .mplayer
 .npm
 .oracle_jre_usage
@@ -57,6 +66,7 @@ tmp
 Zotero
 .CFUserTextEncoding
 .DS_Store
+.flutter
 .lesshst
 .pnp.cjs
 .viminfo
