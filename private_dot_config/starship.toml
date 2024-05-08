@@ -1,0 +1,471 @@
+# ORDER: OS, User/Machine, Remote Context, Directory, Git, Programming Languages, Build Tools, Infrastructure Tools, Execution Information, New Line
+format = """
+[](subtext1)\
+$os\
+[](fg:subtext1 bg:flamingo)\
+$username\
+$sudo\
+$hostname\
+$localip\
+[ ](fg:flamingo bg:sky)\
+$container\
+$kubernetes\
+[ ](fg:sky bg:green)\
+$directory\
+[ ](fg:green bg:yellow)\
+$git_branch\
+$git_commit\
+$git_status\
+[ ](fg:yellow bg:none)\
+
+$fill\
+
+[](maroon)\
+$dart\
+$golang\
+$java\
+$kotlin\
+$nodejs\
+$python\
+$swift\
+[ ](fg:blue bg:maroon)\
+$gradle\
+${custom.maven}\
+$package\
+[ ](fg:mauve bg:blue)\
+$helm\
+$terraform\
+$vagrant\
+${custom.ansible}\
+[ ](fg:peach bg:mauve)\
+$cmd_duration\
+$status\
+$jobs\
+[ ](fg:subtext1 bg:peach)\
+$time\
+[](subtext1)\
+
+$line_break\
+$character
+"""
+
+palette = "catppuccin_frappe"
+add_newline = true
+command_timeout = 2000
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[battery]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[c]
+disabled = true
+
+[character]
+success_symbol = "[✓](bold green)"
+error_symbol = "[✗](bold red)"
+
+[cmake]
+disabled = true
+
+[cobol]
+disabled = true
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+show_notifications = true
+format = "[ 󰚭 $duration]($style)"
+style = "bold fg:base bg:peach"
+
+[conda]
+disabled = true
+
+[container]
+format = "[$symbol $name ]($style) "
+symbol = ""
+style = "bold fg:base bg:sky"
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dart]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:maroon"
+
+[deno]
+disabled = true
+
+[directory]
+format = "[$read_only$path ]($style)"
+read_only = ""
+home_symbol = " (~)"
+style = "bold fg:base bg:green"
+
+[direnv]
+disabled = true # MAYBE CHANGE LATER
+
+[docker_context]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[env_var]
+disabled = true
+
+[erlang]
+disabled = true
+
+[fennel]
+disabled = true
+
+[fill]
+symbol = " "
+disabled = false
+
+[fossil_branch]
+disabled = true
+
+[fossil_metrics]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[git_branch]
+format = "[$symbol $branch(:$remote_branch) ]($style)"
+symbol = ""
+style = "bold fg:base bg:yellow"
+
+[git_commit]
+format = '[\($hash\) $tag ]($style)'
+only_detached = false
+tag_disabled = false
+tag_symbol = "󰓹 "
+style = "bold fg:base bg:yellow"
+
+[git_state]
+disabled = true
+
+[git_metrics]
+disabled = true
+
+[git_status]
+format = '[\[$all_status$ahead_behind\] ]($style)'
+style = "bold fg:base bg:yellow"
+
+[golang]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:maroon"
+
+[guix_shell]
+disabled = true
+
+[gradle]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:blue"
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[helm]
+format = "[ $symbol ($version)]($style)"
+symbol = "󰠳"
+style = "bold fg:base bg:mauve"
+
+[hostname]
+format = "[$ssh_symbol$hostname ]($style)"
+ssh_symbol = ""
+style = "bold fg:base bg:flamingo"
+
+[java]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:maroon"
+
+[jobs]
+format = "[ $symbol$number]($style)"
+symbol = ""
+style = "bold fg:base bg:peach"
+
+[julia]
+disabled = true
+
+[kotlin]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:maroon"
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\) )]($style)'
+symbol = "󰠳"
+style = "bold fg:base bg:sky"
+
+[line_break]
+disabled = false
+
+[localip]
+disabled = false
+format = "[$localipv4 ]($style)"
+style = "bold fg:base bg:flamingo"
+
+[lua]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[meson]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[nodejs]
+format = "[ $symbol ($version)]($style)"
+symbol = "󰎙"
+style = "bold fg:base bg:maroon"
+
+[ocaml]
+disabled = true
+
+[opa]
+disabled = true
+
+[openstack]
+disabled = true
+
+[os]
+disabled = false
+style = "bold fg:base bg:subtext1"
+[os.symbols]
+Macos = ""
+
+[package]
+format = "[ $symbol $version]($style)"
+symbol = ""
+style = "bold fg:base bg:blue"
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[python]
+format = "[ $symbol $pyenv_prefix($version)($virtualenv)]($style)"
+symbol = "󰌠"
+style = "bold fg:base bg:maroon"
+
+[quarto]
+disabled = true
+
+[rlang]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[shell]
+disabled = true
+
+[shlvl]
+disabled = true
+
+[singularity]
+disabled = true
+
+[solidity]
+disabled = true
+
+[spack]
+disabled = true
+
+[status]
+disabled = false
+format = "[ $symbol]($style)"
+symbol = ""
+success_symbol = ""
+not_executable_symbol = "󰜺"
+not_found_symbol = ""
+sigint_symbol = ""
+signal_symbol = ""
+map_symbol = true
+pipestatus = true
+style = "bold fg:base bg:peach"
+
+[sudo]
+disabled = false
+format = "[$symbol ]($style)"
+symbol = "󱚮"
+style = "bold fg:base bg:flamingo"
+
+[swift]
+format = "[ $symbol ($version)]($style)"
+symbol = ""
+style = "bold fg:base bg:maroon"
+
+[terraform]
+format = "[ $symbol ($version) - $workspace]($style)"
+symbol = "󱁢"
+style = "bold fg:base bg:mauve"
+
+[time]
+format = "[  $time]($style)"
+style = "bold fg:base bg:subtext1"
+disabled = false
+
+[typst]
+disabled = true
+
+[username]
+style_root = "bold fg:base bg:flamingo"
+style_user = "bold fg:base bg:flamingo"
+show_always = true
+format = "[  $user ]($style)"
+
+[vagrant]
+format = "[ $symbol($version)]($style)"
+style = "bold fg:base bg:mauve"
+disabled = false
+
+[vlang]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[zig]
+disabled = true
+
+# Custom modules
+[custom.ansible]
+description = "Ansible version"
+command = "echo v$(echo $(ansible --version 2>/dev/null | head -n 1) | sd '[^0-9.]' '')"
+when = """ test -n "${ANSIBLE_HOME}" """
+files = [ "ansible.cfg" ]
+shell = "/bin/zsh"
+format = "[ $symbol ($output)]($style)"
+symbol = "󱂚"
+style = "bold fg:base bg:mauve"
+
+[custom.maven]
+description = "Maven version"
+command = "echo v$(echo $(mvn --version 2>/dev/null | head -n 1) | cut -f1 -d'(' | sd '[^0-9.]' '')"
+when = """ test -n "${MAVEN_HOME}" || test -n "${MVN_HOME}" || test -n "${M2_HOME}" """
+files = [ "pom.xml" ]
+shell = "/bin/zsh"
+format = "[ $symbol ($output)]($style)"
+symbol = ""
+style = "bold fg:base bg:blue"
+
+# Catppuccin Themes
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
+[palettes.catppuccin_frappe]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
