@@ -72,3 +72,7 @@ Zotero
 .viminfo
 .wget-hsts
 Brewfile.lock.json
+.zsh/.zsh_sessions
+.zsh/.zcompdump
+.zsh/.zsh_history
+.zsh/.zsh_plugins.zsh

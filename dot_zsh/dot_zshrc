@@ -1,0 +1,26 @@
+# Initialize homebrew variables
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Environment variables
+source $ZDOTDIR/env.zsh
+
+# Path configuration
+source $ZDOTDIR/path.zsh
+
+# Load plugins
+source $ZDOTDIR/plugins.zsh
+
+# Alias configuration
+source $ZDOTDIR/aliases.zsh
+
+# Tools configuration
+source $ZDOTDIR/tools.zsh
+
+# Theme configuration
+source $ZDOTDIR/theme.zsh
+
+# Load starhip prompt
+eval "$(starship init zsh)"
+
+# Show system information
+fastfetch
