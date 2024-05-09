@@ -107,3 +107,6 @@ Brewfile.lock.json
 .config/tmux/plugins
 .config/topgrade.d
 .config/wtf/log.txt
+.ssh/authorized_keys
+.ssh/id_*
+.ssh/known_hosts
