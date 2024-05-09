@@ -85,7 +85,7 @@ Brewfile.lock.json
 .config/act
 .config/ai
 .config/asciinema
-.config/chezmoi/chezmoistate.boltdb
+.config/chezmoi
 .config/configstore
 .config/fish
 .config/flutter
