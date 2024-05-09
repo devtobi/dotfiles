@@ -98,7 +98,7 @@ chezmoi apply
 
 3. Further customize dotfiles for your own needs
 
-**Info:**: With `chezmoi update` you can pull the latest changes from this repo. Keep in mind that changes you made by yourself will be overwritten.
+**Info:** With `chezmoi update` you can pull the latest changes from this repo. Keep in mind that changes you made by yourself will be overwritten.
 
 ### Usage
 
