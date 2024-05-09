@@ -2,6 +2,7 @@
 	autocrlf = input
 	pager = delta
 	excludesfile = ~/.git-config/.gitignore
+	attributesfile = ~/.git-config/.gitattributes
 [pull]
 	ff = only
 [filter "lfs"]
