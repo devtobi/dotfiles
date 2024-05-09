@@ -33,7 +33,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Usage] (#usage)
+  - [Usage](#usage)
   <!--* formatting comment -->
 - [License](#license)
 
@@ -126,6 +126,6 @@ mackup restore
 Distributed under the MIT License. See [LICENSE][license-url] for more information.
 
 [license-shield]: https://img.shields.io/github/license/devtobi/dotfiles.svg?style=for-the-badge&logo=github
-[license-url]: https://github.com/devtobi/dotfiles/blob/master/LICENSE
+[license-url]: https://github.com/devtobi/dotfiles/blob/main/LICENSE
 [commit-shield]: https://img.shields.io/github/last-commit/devtobi/dotfiles?style=for-the-badge&logo=github
-[commit-url]: https://github.com/devtobi/dotfiles/commit/master
+[commit-url]: https://github.com/devtobi/dotfiles/commit/main
