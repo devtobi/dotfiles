@@ -102,6 +102,7 @@ Brewfile.lock.json
 .config/jgit
 .config/kitty/kitty.conf.bak
 .config/kitty/current-theme.conf
+.config/nvim/lazy-lock.json
 .config/packer
 .config/rclone
 .config/thefuck
