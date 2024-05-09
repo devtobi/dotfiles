@@ -11,7 +11,6 @@
 .devpod
 .docker
 .fleet
-.git-config
 .gnupg
 .gradle
 .graphbuddy
@@ -112,3 +111,4 @@ Brewfile.lock.json
 .ssh/authorized_keys
 .ssh/id_*
 .ssh/known_hosts
+.git-config/envs
