@@ -1,5 +1,6 @@
 # Tool aliases
 alias c="clear"
+alias q="exit"
 alias cat="bat"
 alias top="btop"
 alias ls="lsd"
