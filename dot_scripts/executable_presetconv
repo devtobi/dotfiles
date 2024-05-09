@@ -1,0 +1,257 @@
+#!/bin/bash
+
+CONVERTER_NAME="Preset Converter"
+LIGHTROOM_FOLDER_NAME="LR"
+TEMP_DIR="$HOME/Documents/PresetConversion"
+CONVERTER_SAVE_DIR="$HOME/Downloads"
+STANDARD_WAIT_TIME=2500
+DRAG_TIME=5000
+PRESET_EXTENSION=".xmp"
+ARCHIVE_EXTENSION=".zip"
+STYLEPACK_EXTENSION=".costylepack"
+
+function checkArguments() {
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: $0 <directory>" >&2
+        exit 1
+    fi
+    if (! directoryExists $1); then
+        echo "The provided directory does not exist!" >&2
+        exit 1
+    fi
+}
+
+function directoryExists() {
+    local directory=$1
+    if [[ ! -d "$directory" ]]; then
+        return 1
+    fi
+    return 0
+}
+
+function countArchiveFiles() {
+    local directory=$1
+    echo $(find "$directory" -type f -name "*$ARCHIVE_EXTENSION" |  wc -l)
+}
+
+function countPresetFiles() {
+    local directory=$1
+    echo $(find "$directory" -type f -name "*$PRESET_EXTENSION" |  wc -l)
+}
+
+function checkPresetArchivesAvailable() {
+    local directory=$1
+    local amountFiles=$(countArchiveFiles $directory)
+    if [ $amountFiles -eq 0 ]; then
+        echo "No preset $ARCHIVE_EXTENSION archives found. Exiting..."
+        exit 1
+    fi
+    echo $amountFiles
+}
+
+function copyToTempDirectory() {
+    local sourcePath=$1
+    echo "Copying $sourcePath to $TEMP_DIR..."
+    cp "$sourcePath" $TEMP_DIR
+}
+
+function getFileName() {
+    local fullPath=$1
+    echo $(basename "$fullPath" $ARCHIVE_EXTENSION)
+}
+
+function unzipToDirectory() {
+    local fileName=$1
+    echo "Unzipping $fileName$ARCHIVE_EXTENSION..."
+    local zipPath="$TEMP_DIR/$fileName$ARCHIVE_EXTENSION"
+    unzip -o "$zipPath" -d "$TEMP_DIR/$fileName" 1>/dev/null 2>/dev/null
+    rm "$zipPath"
+}
+
+function arePresetsAvailable() {
+    local directory=$1
+    local amountFiles=$(countPresetFiles "$directory")
+    if [ $amountFiles -eq 0 ]; then
+        return 1
+    fi
+    return 0
+}
+
+function deletePresetDirectoryFromTempDir() {
+    local folderName=$1
+    rm -rf "$TEMP_DIR/$folderName"
+}
+
+function restructurePresetFolder() {
+    local folderName=$1
+    echo "Restructuring preset folder $folderName..."
+
+    # Delete all files except *.xmp
+    local searchDirectory="$TEMP_DIR/$folderName"
+    find "$searchDirectory" -type f ! -name "*$PRESET_EXTENSION" -delete
+
+    # Move *.xmp Files to LR folder
+    local lightroomDirectory="$searchDirectory/$LIGHTROOM_FOLDER_NAME"
+    mkdir -p "$lightroomDirectory"
+    find "$searchDirectory" -name "*$PRESET_EXTENSION" -exec mv -i {} "$lightroomDirectory" </dev/null \; 2>/dev/null
+
+    # Rename presets in LR folder => Preset #1 etc.
+    ls -v "$lightroomDirectory" | cat -n | while read n f; do mv -n "$lightroomDirectory/$f" "$lightroomDirectory/$folderName #$n.xmp"; done 
+
+    # Delete all folders except Lightroom folder
+    find "$searchDirectory" -mindepth 1 ! -regex "^$lightroomDirectory\(/.*\)*" -delete
+}
+
+function countDown() {
+    echo "While converting the preset, please do not move your mouse!"
+    for i in {5..1}
+    do
+        echo "Starting in $i..."
+        sleep 1
+    done
+}
+
+function setupPresetConverter() {
+    echo "Setting up Preset Converter..."
+    open -a "$CONVERTER_NAME"
+    sleep 2
+    osascript \
+    -e "tell application \"System Events\" to tell application process \"$CONVERTER_NAME\"" \
+    -e "set position of window 1 to {0, 0}" \
+    -e "end tell"
+}
+
+function putPresetConverterToFront() {
+    osascript \
+    -e "tell application \"System Events\" to tell application process \"$CONVERTER_NAME\"" \
+    -e "set frontmost to true" \
+    -e "end tell"
+}
+
+function quitPresetConverter() {
+    echo "Quitting Preset Converter..."
+    osascript -e "quit app \"$CONVERTER_NAME\""
+}
+
+function selectAllFilesInFinder() {
+    cliclick dd:1050,370
+    cliclick w:$STANDARD_WAIT_TIME
+
+    cliclick dm:1050,690
+    cliclick w:$DRAG_TIME
+
+    cliclick du:1050,690
+}
+
+function doConversion() {
+    local presetName=$1
+    echo "Converting $presetName..."
+
+    putPresetConverterToFront
+
+    # Click convert button
+    cliclick dc:430,150
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select favorite folder for temp directory in finder window
+    cliclick dc:980,650
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select preset folder in temp directory
+    cliclick dc:1100,370
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select LR folder in directory
+    cliclick dc:1100,370
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select all .xmp-Files
+    selectAllFilesInFinder
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select open-Button
+    cliclick dc:1600,690
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select convert-all-Button (camera calibration)
+    cliclick dc:400,180
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select convert-all-Button (white balance big)
+    cliclick dc:400,220
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select convert-all-Button (white balance small)
+    cliclick dc:400,200
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Select convert-all-Button (camera calibration again if after white balance)
+    cliclick dc:400,180
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Enter preset pack name
+    cliclick t:"$presetName"
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Click open button
+    cliclick dc:1430,500
+    cliclick w:$STANDARD_WAIT_TIME
+
+    # Click replace button (if shown)
+    cliclick dc:1350,600
+}
+
+function moveStylePack() {
+    local fileName=$1
+    echo "Moving $fileName stylepack to $TEMP_DIR/$fileName..."
+    mv "$CONVERTER_SAVE_DIR/$fileName$STYLEPACK_EXTENSION" "$TEMP_DIR/$fileName"
+}
+
+function moveFolderToResult() {
+    local fileName=$1
+    local filePath=$2
+    echo "Moving $fileName folder to final location $filePath"
+    mv "$TEMP_DIR/$fileName" "$filePath"
+}
+
+function handleZipFile() {
+    local zipPath=$1
+    local fileName=$(getFileName "$zipPath")
+    local filePath=${zipPath%"$fileName.zip"}
+    currentFile=$((currentFile+1))
+    echo "====== Conversion of $fileName: STARTED [$currentFile/$amountFiles] ====="
+
+    # 1. Copy zip-File to temp-dir
+    copyToTempDirectory "$zipPath"
+    # 2. Unzip File
+    unzipToDirectory "$fileName"
+    # 3. Check if xmp files can be found recursively
+    if (! arePresetsAvailable "$TEMP_DIR/$fileName"); then
+        echo "Deleting $fileName because no $PRESET_EXTENSION files were found..."
+        deletePresetDirectoryFromTempDir "$fileName"
+        echo "====== Conversion of $fileName: NOT APPLICABLE ====="
+        return
+    fi
+    # 4. Delete all files except xmp and restructure folder
+    restructurePresetFolder "$fileName"
+    # 5. Do conversion if xmp files found
+    doConversion "$fileName"
+    # 6. Move created costyle-File to temp Preset directory
+    moveStylePack "$fileName"
+    # 7. Move finished folder to result directory
+    moveFolderToResult "$fileName" "$filePath"
+    echo "====== Conversion of $fileName: COMPLETED ====="
+}
+
+function loopOverZipFiles() {
+    local directory=$1
+    find $directory -name "*$ARCHIVE_EXTENSION" | while read zipPath; do handleZipFile "$zipPath"; done
+}
+
+checkArguments $@
+amountFiles=$(checkPresetArchivesAvailable $1)
+currentFile=0
+countDown
+setupPresetConverter
+loopOverZipFiles $1
+quitPresetConverter

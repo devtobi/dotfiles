@@ -45,6 +45,7 @@
 .vagrant.d
 .virtualenvs
 .vnc
+.vscode
 Acustica
 ai_overlay_tmp
 Applications
@@ -52,6 +53,7 @@ Applications (Parallels)
 Capsule
 CaptureOne
 Desktop
+Development
 Documents
 Downloads
 go

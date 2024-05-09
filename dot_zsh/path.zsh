@@ -13,4 +13,4 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH=/Applications/MacUpdater.app/Contents/Resources:$PATH
 
 # Own scripts
-export PATH=/$HOME/Development/tools:$PATH # Move to own directory in home folder
+export PATH=/$HOME/.scripts:$PATH
