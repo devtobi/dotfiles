@@ -1,6 +1,7 @@
 [core]
 	autocrlf = input
 	pager = delta
+	excludesfile = ~/.git-config/.gitignore
 [pull]
 	ff = only
 [filter "lfs"]
@@ -33,10 +34,10 @@
 # === Environment configurations ===
 # include GitHub configuration as default
 [include]
-  	path = ~/.git-config/.gitconfig-github
+  	path = ~/.git-config/envs/.gitconfig-github
 # include GitLab configuration in specific directory
 [includeIf "gitdir:~/Development/repositories/gitlab/"]
-  	path = ~/.git-config/.gitconfig-gitlab-lrz
+  	path = ~/.git-config/envs/.gitconfig-gitlab-lrz
 # include Forgejo configuration in specific directory
 [includeIf "gitdir:~/Development/repositories/forgejo/"]
-  	path = ~/.git-config/.gitconfig-forgejo
+  	path = ~/.git-config/envs/.gitconfig-forgejo
