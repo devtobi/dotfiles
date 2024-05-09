@@ -11,6 +11,8 @@
 .devpod
 .docker
 .fleet
+.git-config
+.gnupg
 .gradle
 .graphbuddy
 .hawtjni
