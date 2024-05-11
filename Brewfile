@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "ameshkov/tap"
 tap "ankitpokhrel/jira-cli"
 tap "apple/apple", "http://github.com/apple/homebrew-apple"
@@ -48,6 +49,7 @@ brew "cowsay"
 brew "ctop"
 brew "curl"
 brew "dart-sdk"
+brew "delve"
 brew "dive"
 brew "dockutil"
 brew "entr"
@@ -170,6 +172,7 @@ brew "real-aazam/aazam/hollywood"
 brew "skalt/git-cc/git-cc"
 brew "snyk/tap/snyk"
 brew "tako8ki/tap/gobang"
+cask "1password"
 cask "adguard"
 cask "affinity-designer"
 cask "affinity-photo"
@@ -283,6 +286,7 @@ cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
 cask "zoom"
 cask "zotero"
+mas "1Password for Safari", id: 1569813296
 mas "AusweisApp", id: 948660805
 mas "Cascadea", id: 1432182561
 mas "Compressor", id: 424390742

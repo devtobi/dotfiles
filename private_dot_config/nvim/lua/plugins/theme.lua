@@ -37,6 +37,8 @@ return {
 				},
 				alpha = true,
 				cmp = true,
+				dap = true,
+				dap_ui = true,
 			},
 		})
 		vim.o.termguicolors = true
