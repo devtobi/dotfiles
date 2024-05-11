@@ -35,6 +35,7 @@ return {
 						background = true,
 					},
 				},
+				alpha = true,
 			},
 		})
 		vim.o.termguicolors = true
