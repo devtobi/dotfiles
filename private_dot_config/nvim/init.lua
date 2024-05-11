@@ -17,4 +17,3 @@ require("vim-options")
 
 -- Register plugins
 require("lazy").setup("plugins")
-
