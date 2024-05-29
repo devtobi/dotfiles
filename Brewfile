@@ -87,6 +87,7 @@ brew "helix"
 brew "helm"
 brew "hey"
 brew "httpie"
+brew "imagemagick"
 brew "jmeter"
 brew "pandoc"
 brew "jupyterlab"
@@ -99,6 +100,7 @@ brew "lego"
 brew "lolcat"
 brew "lsd"
 brew "mackup"
+brew "mailsy"
 brew "mas"
 brew "maven"
 brew "minikube"
@@ -134,6 +136,7 @@ brew "scala"
 brew "sd"
 brew "shellcheck"
 brew "sl"
+brew "speedtest-cli"
 brew "sshs"
 brew "starship"
 brew "swagger-codegen"
@@ -316,6 +319,7 @@ mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "PayPal Honey", id: 1472777122
 mas "Reeder", id: 1529448980
+mas "SnippetsLab", id: 1006087419
 mas "Streaks", id: 963034692
 mas "Structured", id: 1499198946
 mas "TestFlight", id: 899247664
