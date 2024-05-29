@@ -13,6 +13,9 @@ source $ZDOTDIR/plugins.zsh
 # Alias configuration
 source $ZDOTDIR/aliases.zsh
 
+# Functions configuration
+source $ZDOTDIR/functions.zsh
+
 # Tools configuration
 source $ZDOTDIR/tools.zsh
 
