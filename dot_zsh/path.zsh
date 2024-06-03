@@ -11,6 +11,7 @@ export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PNPM_HOME:$PATH
+export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Tools
