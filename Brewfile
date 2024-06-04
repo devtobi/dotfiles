@@ -330,6 +330,7 @@ mas "Structured", id: 1499198946
 mas "TestFlight", id: 899247664
 mas "Theine", id: 955848755
 mas "Things", id: 904280696
+mas "UnTrap", id: 1637438059
 mas "VPN Unlimited®", id: 694633015
 mas "WaterMinder", id: 1415257369
 mas "Xcode", id: 497799835
