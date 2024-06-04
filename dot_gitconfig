@@ -42,3 +42,6 @@
 # include Forgejo configuration in specific directory
 [includeIf "gitdir:~/Development/repositories/forgejo/"]
   	path = ~/.git-config/envs/.gitconfig-forgejo
+[diff "lockb"]
+	textconv = bun
+	binary = true

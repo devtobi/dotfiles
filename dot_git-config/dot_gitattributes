@@ -95,3 +95,6 @@
 .gitattributes export-ignore
 .gitignore     export-ignore
 .gitkeep       export-ignore
+
+# Specialized tooling
+*.lockb binary diff=lockb
