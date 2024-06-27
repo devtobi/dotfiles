@@ -162,7 +162,6 @@ brew "wget"
 brew "wtfutil"
 brew "xplr"
 brew "yamllint"
-brew "ykman"
 brew "yq"
 brew "yt-dlp"
 brew "zoxide"
@@ -291,7 +290,6 @@ cask "whatsapp"
 cask "writerside"
 cask "xquartz"
 cask "yubico-authenticator"
-cask "yubico-yubikey-manager"
 cask "zoom"
 cask "zotero"
 mas "1Password for Safari", id: 1569813296
@@ -332,6 +330,7 @@ mas "Structured", id: 1499198946
 mas "TestFlight", id: 899247664
 mas "Theine", id: 955848755
 mas "Things", id: 904280696
+mas "UnTrap", id: 1637438059
 mas "VPN Unlimited®", id: 694633015
 mas "WaterMinder", id: 1415257369
 mas "Xcode", id: 497799835
