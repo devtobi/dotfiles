@@ -60,6 +60,7 @@ brew "fastfetch"
 brew "fd"
 brew "ffmpeg"
 brew "figlet"
+brew "firefoxpwa"
 brew "fortune"
 brew "freerdp"
 brew "fzf"
@@ -113,7 +114,7 @@ brew "neovim"
 brew "noti"
 brew "npm-check-updates"
 brew "oha"
-brew "ollama"
+brew "ollama", restart_service: true
 brew "openapi-generator"
 brew "openshift-cli"
 brew "openssh"
@@ -201,6 +202,7 @@ cask "bitwarden"
 cask "blisk"
 cask "boop"
 cask "bruno"
+cask "chatgpt"
 cask "clion"
 cask "commander-one"
 cask "daisydisk"
@@ -330,7 +332,6 @@ mas "Structured", id: 1499198946
 mas "TestFlight", id: 899247664
 mas "Theine", id: 955848755
 mas "Things", id: 904280696
-mas "UnTrap", id: 1637438059
 mas "VPN Unlimited®", id: 694633015
 mas "WaterMinder", id: 1415257369
 mas "Xcode", id: 497799835
@@ -378,6 +379,7 @@ vscode "streetsidesoftware.code-spell-checker-german"
 vscode "tamasfe.even-better-toml"
 vscode "tim-koehler.helm-intellisense"
 vscode "tomoki1207.pdf"
+vscode "vivaxy.vscode-conventional-commits"
 vscode "vue.volar"
 vscode "wix.vscode-import-cost"
 vscode "xabikos.javascriptsnippets"
