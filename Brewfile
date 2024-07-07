@@ -39,6 +39,7 @@ brew "awscli"
 brew "bash"
 brew "bat"
 brew "bat-extras"
+brew "bitwarden-cli"
 brew "gcc"
 brew "btop"
 brew "chezmoi"
@@ -92,6 +93,7 @@ brew "http-server"
 brew "httpie"
 brew "imagemagick"
 brew "jmeter"
+brew "jq"
 brew "pandoc"
 brew "jupyterlab"
 brew "k9s"
@@ -197,7 +199,6 @@ cask "aws-vault"
 cask "balenaetcher"
 cask "balsamiq-wireframes"
 cask "bartender"
-cask "bitwarden"
 cask "blisk"
 cask "boop"
 cask "bruno"
@@ -294,9 +295,11 @@ cask "zoom"
 cask "zotero"
 mas "1Password for Safari", id: 1569813296
 mas "AusweisApp", id: 948660805
+mas "Bitwarden", id: 1352778147
 mas "Cascadea", id: 1432182561
 mas "Compressor", id: 424390742
 mas "Cursor Pro", id: 1447043133
+mas "DaftCloud", id: 1320450034
 mas "Developer", id: 640199958
 mas "Dropover", id: 1355679052
 mas "Dynamo", id: 1445910651
