@@ -183,7 +183,6 @@ brew "real-aazam/aazam/hollywood"
 brew "skalt/git-cc/git-cc"
 brew "snyk/tap/snyk"
 brew "tako8ki/tap/gobang"
-cask "1password"
 cask "adguard"
 cask "affinity-designer"
 cask "affinity-photo"
@@ -293,7 +292,6 @@ cask "xquartz"
 cask "yubico-authenticator"
 cask "zoom"
 cask "zotero"
-mas "1Password for Safari", id: 1569813296
 mas "AusweisApp", id: 948660805
 mas "Bitwarden", id: 1352778147
 mas "Cascadea", id: 1432182561
