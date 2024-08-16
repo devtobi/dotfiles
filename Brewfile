@@ -121,6 +121,7 @@ brew "npm-check-updates"
 brew "oha"
 brew "ollama", restart_service: true
 brew "openapi-generator"
+brew "openjdk@21"
 brew "openshift-cli"
 brew "openssh"
 brew "osv-scanner"

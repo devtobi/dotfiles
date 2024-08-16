@@ -1,6 +1,7 @@
 # Homebrew package manager
 export PATH=$(brew --prefix)/bin:$PATH
 export PATH=$(brew --prefix openssh)/bin:$PATH
+export PATH=$(brew --prefix openjdk@21)/bin:$PATH
 
 # Development
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
