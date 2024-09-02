@@ -39,6 +39,7 @@ brew "awscli"
 brew "bash"
 brew "bat"
 brew "bat-extras"
+brew "node"
 brew "bitwarden-cli"
 brew "gcc"
 brew "btop"
@@ -248,7 +249,7 @@ cask "kitty"
 cask "languagetool"
 cask "ledger-live"
 cask "little-snitch"
-cask "logi-options-plus"
+cask "logi-options+"
 cask "loupedeck"
 cask "lunar"
 cask "mactex"
@@ -319,6 +320,7 @@ mas "GarageBand", id: 682658836
 mas "Gestimer", id: 6447125648
 mas "Goodnotes", id: 1444383602
 mas "Hand Mirror", id: 1502839586
+mas "Hyperduck", id: 6444667067
 mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
 mas "Logic Pro", id: 634148309
