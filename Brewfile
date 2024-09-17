@@ -317,7 +317,6 @@ mas "eduVPN", id: 1317704208
 mas "Endel", id: 1346247457
 mas "Fabula", id: 1503214451
 mas "Final Cut Pro", id: 424389933
-mas "Flow", id: 1423210932
 mas "GarageBand", id: 682658836
 mas "Gestimer", id: 6447125648
 mas "Goodnotes", id: 1444383602
@@ -327,7 +326,6 @@ mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
 mas "Logic Pro", id: 634148309
 mas "Looking Glass", id: 1602004436
-mas "Magnet", id: 441258766
 mas "MainStage", id: 634159523
 mas "Mirror Magnet", id: 1563698880
 mas "Motion", id: 434290957
