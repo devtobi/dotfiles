@@ -88,5 +88,5 @@ peterhurford/git-it-on.zsh
 skx/sysadmin-util
 # unixorn/jpb.zshplugin
 unixorn/tumult.plugin.zsh
-xvoland/Extract
+le0me55i/zsh-extract
 # MichaelAquilina/zsh-auto-notify
