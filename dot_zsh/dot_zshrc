@@ -8,7 +8,7 @@ source $ZDOTDIR/env.zsh
 source $ZDOTDIR/path.zsh
 
 # Load plugins
-source $ZDOTDIR/plugins.zsh
+# source $ZDOTDIR/plugins.zsh
 
 # Alias configuration
 source $ZDOTDIR/aliases.zsh
@@ -22,7 +22,7 @@ source $ZDOTDIR/tools.zsh
 # Theme configuration
 source $ZDOTDIR/theme.zsh
 
-# Load starhip prompt
+# Load starship prompt
 eval "$(starship init zsh)"
 
 # Show system information
