@@ -248,7 +248,6 @@ cask "istat-menus"
 cask "izotope-product-portal"
 cask "keka"
 cask "kitty"
-cask "languagetool"
 cask "ledger-live"
 cask "little-snitch"
 cask "logi-options+"
@@ -326,6 +325,7 @@ mas "Hand Mirror", id: 1502839586
 mas "Hyperduck", id: 6444667067
 mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
+mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Looking Glass", id: 1602004436
 mas "Magnet", id: 441258766
