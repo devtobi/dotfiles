@@ -10,14 +10,14 @@ source $ZDOTDIR/path.zsh
 # Load plugins
 source $ZDOTDIR/plugins.zsh
 
+# Tools configuration
+source $ZDOTDIR/tools.zsh
+
 # Alias configuration
 source $ZDOTDIR/aliases.zsh
 
 # Functions configuration
 source $ZDOTDIR/functions.zsh
-
-# Tools configuration
-source $ZDOTDIR/tools.zsh
 
 # Theme configuration
 source $ZDOTDIR/theme.zsh
