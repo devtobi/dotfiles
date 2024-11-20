@@ -29,8 +29,8 @@ brew "act"
 brew "actionlint"
 brew "age"
 brew "xz"
-brew "python@3.12"
 brew "ansible"
+brew "python@3.12"
 brew "ansible-lint"
 brew "antidote"
 brew "asciinema"
@@ -77,6 +77,7 @@ brew "gitleaks"
 brew "glab"
 brew "glow"
 brew "go"
+brew "pkgconf"
 brew "gobject-introspection"
 brew "golangci-lint"
 brew "gradle"
@@ -186,6 +187,7 @@ cask "affinity-designer"
 cask "affinity-photo"
 cask "affinity-publisher"
 cask "alfred"
+cask "android-platform-tools"
 cask "android-studio"
 cask "anki"
 cask "anythingllm"
@@ -254,6 +256,7 @@ cask "network-radar"
 cask "notchnook"
 cask "numi"
 cask "obsidian"
+cask "ollamac"
 cask "onyx"
 cask "orbstack"
 cask "paletro"
@@ -305,7 +308,7 @@ mas "Dynamo", id: 1445910651
 mas "eduVPN", id: 1317704208
 mas "Endel", id: 1346247457
 mas "Fabula", id: 1503214451
-mas "Final Cut Pro", id: 424389933
+mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
 mas "Gestimer", id: 6447125648
 mas "Goodnotes", id: 1444383602
@@ -316,6 +319,7 @@ mas "Keystroke Pro", id: 1572206224
 mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Looking Glass", id: 1602004436
+mas "Lumaly", id: 1573979983
 mas "Magnet", id: 441258766
 mas "MainStage", id: 634159523
 mas "Mirror Magnet", id: 1563698880
@@ -325,7 +329,6 @@ mas "Numbers", id: 409203825
 mas "Page Screenshot for Safari", id: 1472715727
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
-mas "PayPal Honey", id: 1472777122
 mas "Reeder", id: 1529448980
 mas "SnippetsLab", id: 1006087419
 mas "Streaks", id: 963034692
@@ -342,12 +345,14 @@ vscode "aaron-bond.better-comments"
 vscode "ajithgopi.css-snippets"
 vscode "alefragnani.project-manager"
 vscode "ban.spellright"
+vscode "burkeholland.simple-react-snippets"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "christian-kohler.path-intellisense"
 vscode "continue.continue"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
+vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-complete-tag"
@@ -378,8 +383,10 @@ vscode "rangav.vscode-thunder-client"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "seatonjiang.gitmoji-vscode"
+vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "streetsidesoftware.code-spell-checker-german"
+vscode "stylelint.vscode-stylelint"
 vscode "tamasfe.even-better-toml"
 vscode "tim-koehler.helm-intellisense"
 vscode "tomoki1207.pdf"
