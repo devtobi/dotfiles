@@ -51,9 +51,6 @@ else
     OLD_THEME=$DARK_THEME
 fi
 
-# Set theme for kitty
-kitty +kitten themes --reload-in=all $THEME_BASE-$NEW_THEME
-
 # Set theme for fsh (fast-syntax-highlighting)
 fast-theme XDG:${(L)THEME_BASE}-${(L)NEW_THEME} > /dev/null
 
