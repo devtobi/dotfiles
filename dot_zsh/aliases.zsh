@@ -11,7 +11,6 @@ alias man="batman"
 # alias find="fd"
 alias ollama-start="brew services start ollama"
 alias ollama-stop="brew services stop ollama"
-alias pdi="sdk use java 17.0.2-open && /Applications/data-integration/spoon.sh"
 
 # Development aliases
 alias gcc="gcc-13"
@@ -20,3 +19,4 @@ alias python="python3"
 alias npm="npmc"
 alias pnpm="npmc --pnpm-alias"
 alias bun="npmc --bun-alias"
+alias code="codium"
