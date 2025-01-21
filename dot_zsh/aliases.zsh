@@ -13,8 +13,6 @@ alias ollama-start="brew services start ollama"
 alias ollama-stop="brew services stop ollama"
 
 # Development aliases
-alias gcc="gcc-13"
-alias g++="g++-13"
 alias python="python3"
 alias npm="npmc"
 alias pnpm="npmc --pnpm-alias"

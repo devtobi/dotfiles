@@ -15,7 +15,7 @@ pre_sudo = true
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["containers", "gem", "ruby_gems", "krew", "aqua"]
+disable = ["containers", "gem", "ruby_gems", "krew", "aqua", "pnpm", "bun"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
