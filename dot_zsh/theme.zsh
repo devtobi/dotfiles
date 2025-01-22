@@ -8,7 +8,6 @@ LIGHT_THEME="Latte"
 
 # Configuration file locations
 BTOP_CONFIG_PATH=$XDG_CONFIG_HOME/btop/btop.conf
-K9S_CONFIG_PATH=$XDG_CONFIG_HOME/k9s/config.yaml
 LAZYGIT_DIR=$XDG_CONFIG_HOME/lazygit
 GIT_CONFIG_PATH=$HOME/.gitconfig
 STARSHIP_CONFIG_PATH=$XDG_CONFIG_HOME/starship.toml
@@ -62,9 +61,6 @@ sd ${(L)OLD_THEME} ${(L)NEW_THEME} $BTOP_CONFIG_PATH
 
 # Set theme for fzf
 export FZF_DEFAULT_OPTS=$FZF_THEME
-
-# Set theme for k9s
-sd ${(L)OLD_THEME} ${(L)NEW_THEME} $K9S_CONFIG_PATH
 
 # Set theme for lazygit
 export LG_CONFIG_FILE=$LAZYGIT_DIR/config.yml,$LAZYGIT_DIR/${(L)THEME_BASE}-${(L)NEW_THEME}.yml
