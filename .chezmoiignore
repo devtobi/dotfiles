@@ -140,3 +140,4 @@ OrbStack
 .rewrite-cache
 .pyenv
 .key
+.sentry**
