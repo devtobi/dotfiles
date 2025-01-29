@@ -55,7 +55,7 @@ Applications (Parallels)
 Capsule
 CaptureOne
 Desktop
-Development
+Developer
 Documents
 Downloads
 go
@@ -97,6 +97,7 @@ Brewfile.lock.json
 .config/gh
 .config/gh-dash/config.yml
 .config/github-copilot
+.config/git/envs
 .config/gitui
 .config/gobang
 .config/helix
@@ -107,6 +108,7 @@ Brewfile.lock.json
 .config/nvim/lazy-lock.json
 .config/nvim/.luarc.json
 .config/packer
+.config/raycast
 .config/rclone
 .config/thefuck
 .config/tmux/plugins
@@ -118,7 +120,6 @@ Brewfile.lock.json
 .ssh/id_*
 .ssh/known_hosts
 .ssh/known_hosts**
-.git-config/envs
 README.md
 LICENSE
 .zsh_sessions

@@ -16,3 +16,6 @@ eval "$(pyenv init - zsh)"
 
 # OrbStack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# batdiff configuration (to use delta)
+export BATDIFF_USE_DELTA=true

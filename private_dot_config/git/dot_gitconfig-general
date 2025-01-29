@@ -1,0 +1,16 @@
+[core]
+	autocrlf = input
+	excludesfile = ~/.config/git/.gitignore
+	attributesfile = ~/.config/git/.gitattributes
+[pull]
+	ff = only
+[merge]
+    conflictstyle = zdiff3
+[diff]
+    colorMoved = default
+[include]
+	path = ~/.config/git/.gitconfig-tools
+[include]
+	path = ~/.config/git/.gitconfig-security
+[include]
+	path = ~/.config/git/.gitconfig-environments

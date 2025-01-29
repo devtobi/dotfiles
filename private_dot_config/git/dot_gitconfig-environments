@@ -1,0 +1,8 @@
+# Set GitHub configuration as default
+[include]
+  	path = ~/.config/git/envs/.gitconfig-github
+# Include additional configurations based on path
+[includeIf "gitdir:~/Developer/Repositories/GitLab/"]
+  	path = ~/.config/git/envs/.gitconfig-gitlab-lrz
+[includeIf "gitdir:~/Developer/Repositories/Forgejo/"]
+  	path = ~/.config/git/envs/.gitconfig-forgejo

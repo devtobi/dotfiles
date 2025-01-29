@@ -1,0 +1,9 @@
+#  More information in https://github.com/denisidoro/navi/blob/master/docs/config_file_example.yaml
+client:
+  tealdeer: true # enables tealdeer support for navi --tldr
+
+shell:
+  # Shell used for shell out. Possible values: bash, zsh, dash, ...
+  # For Windows, use `cmd.exe` instead.
+  command: zsh
+  finder_command: zsh # similar, but for fzf's internals
