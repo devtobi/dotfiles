@@ -157,6 +157,7 @@ mas "Mirror Magnet", id: 1563698880
 mas "Motion", id: 434290957
 mas "Noir", id: 1592917505
 mas "Reeder", id: 1529448980
+mas "Refined GitHub", id: 1519867270
 mas "SnippetsLab", id: 1006087419
 mas "Stecker", id: 6447288587
 mas "Streaks", id: 963034692
