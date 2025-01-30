@@ -1,0 +1,16 @@
+# Required to work with bun lockfiles
+[diff "lockb"]
+	textconv = bun
+	binary = true
+# Configuration for delta diff checker
+[core]
+	pager = delta
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+	line-numbers = true
+	features = catppuccin-latte
+[interactive]
+    diffFilter = delta --color-only
+[include]
+	path = ~/.config/delta/catppuccin.gitconfig
