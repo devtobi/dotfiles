@@ -7,11 +7,11 @@ source $ZDOTDIR/env.zsh
 # Path configuration
 source $ZDOTDIR/path.zsh
 
-# Load plugins
-source $ZDOTDIR/plugins.zsh
-
 # Tools configuration
 source $ZDOTDIR/tools.zsh
+
+# Load plugins
+source $ZDOTDIR/plugins.zsh
 
 # Alias configuration
 source $ZDOTDIR/aliases.zsh

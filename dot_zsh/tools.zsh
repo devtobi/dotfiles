@@ -19,3 +19,9 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # batdiff configuration (to use delta)
 export BATDIFF_USE_DELTA=true
+
+# Setup cache completion directory for ohmyzsh plugins
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+[[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
+[[ -d "${ZSH_CACHE_DIR}/completions" ]] || mkdir -p "${ZSH_CACHE_DIR}/completions"
+export FPATH="$ZSH_CACHE_DIR/completions:$FPATH"
