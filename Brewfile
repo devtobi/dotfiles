@@ -42,7 +42,6 @@ brew "navi"
 brew "neovim"
 brew "nvm"
 brew "ollama", restart_service: :changed
-brew "openssh"
 brew "pipx"
 brew "pkgconf"
 brew "poppler"
