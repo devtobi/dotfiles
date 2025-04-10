@@ -10,8 +10,6 @@ ohmyzsh/ohmyzsh path:plugins/encode64
 # ohmyzsh/ohmyzsh path:plugins/git-auto-fetch # currently not working
 ohmyzsh/ohmyzsh path:plugins/gitignore
 ohmyzsh/ohmyzsh path:plugins/macos
-# ohmyzsh/ohmyzsh path:plugins/poetry-env # currently not working
-# ohmyzsh/ohmyzsh path:plugins/pyenv # currently not working
 ohmyzsh/ohmyzsh path:plugins/safe-paste
 # ohmyzsh/ohmyzsh path:plugins/starship # currently not working
 # ohmyzsh/ohmyzsh path:plugins/sudo # currently not working due to conflict with thefuck
@@ -42,7 +40,6 @@ ohmyzsh/ohmyzsh path:plugins/node
 ohmyzsh/ohmyzsh path:plugins/npm
 # ohmyzsh/ohmyzsh path:plugins/nvm # currently not working
 ohmyzsh/ohmyzsh path:plugins/pip
-ohmyzsh/ohmyzsh path:plugins/poetry
 ohmyzsh/ohmyzsh path:plugins/procs
 # ohmyzsh/ohmyzsh path:plugins/ripgrep
 ohmyzsh/ohmyzsh path:plugins/sdk
@@ -72,7 +69,6 @@ QuarticCat/zsh-smartcache
 joshskidmore/zsh-fzf-history-search
 trystan2k/zsh-tab-title
 MichaelAquilina/zsh-you-should-use
-MichaelAquilina/zsh-autoswitch-virtualenv
 marlonrichert/zsh-autocomplete
 zsh-users/zsh-autosuggestions
 kaplanelad/shellfirm path:shell-plugins/shellfirm.plugin.oh-my-zsh.zsh

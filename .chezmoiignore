@@ -22,8 +22,10 @@
 .jfrog-idea-plugin
 .jrebel
 .jupyter
+.keras
 .krew
 .kube
+.llamafile
 .lego
 .local
 .m2
@@ -48,6 +50,7 @@
 .virtualenvs
 .vnc
 .vscode
+.yarn
 Acustica
 ai_overlay_tmp
 Applications
