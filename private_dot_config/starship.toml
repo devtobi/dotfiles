@@ -379,7 +379,6 @@ symbol = ""
 style = "bold fg:base bg:blue"
 
 [custom.uv]
-# command = "uv run python --version | sed 's/Python //g'"
 command = "$(uv python find) --version | sed 's/Python //g'"
 detect_files = [ "uv.lock" ]
 format = "[ $symbol ($output)]($style)"
