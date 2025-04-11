@@ -9,7 +9,6 @@ $hostname\
 $localip\
 [ ](fg:flamingo bg:sky)\
 $container\
-$kubernetes\
 [ ](fg:sky bg:green)\
 $directory\
 [ ](fg:green bg:yellow)\
@@ -21,23 +20,16 @@ $git_status\
 $fill\
 
 [](maroon)\
-$dart\
-$golang\
 $java\
-$kotlin\
 $nodejs\
 $python\
+${custom.uv}\
 $swift\
 [ ](fg:blue bg:maroon)\
 $gradle\
 ${custom.maven}\
 $package\
-[ ](fg:mauve bg:blue)\
-$helm\
-$terraform\
-$vagrant\
-${custom.ansible}\
-[ ](fg:peach bg:mauve)\
+[ ](fg:peach bg:blue)\
 $cmd_duration\
 $status\
 $jobs\
@@ -49,7 +41,7 @@ $line_break\
 $character
 """
 
-palette = "catppuccin_frappe"
+palette = "catppuccin_latte"
 add_newline = true
 command_timeout = 2000
 
@@ -92,6 +84,7 @@ style = "bold fg:base bg:peach"
 disabled = true
 
 [container]
+disabled = false
 format = "[$symbol $name ]($style) "
 symbol = ""
 style = "bold fg:base bg:sky"
@@ -103,9 +96,7 @@ disabled = true
 disabled = true
 
 [dart]
-format = "[ $symbol ($version)]($style)"
-symbol = ""
-style = "bold fg:base bg:maroon"
+disabled = true
 
 [deno]
 disabled = true
@@ -176,9 +167,7 @@ format = '[\[$all_status$ahead_behind\] ]($style)'
 style = "bold fg:base bg:yellow"
 
 [golang]
-format = "[ $symbol ($version)]($style)"
-symbol = ""
-style = "bold fg:base bg:maroon"
+disabled = true
 
 [guix_shell]
 disabled = true
@@ -195,9 +184,7 @@ disabled = true
 disabled = true
 
 [helm]
-format = "[ $symbol ($version)]($style)"
-symbol = "󰠳"
-style = "bold fg:base bg:mauve"
+disabled = true
 
 [hostname]
 format = "[$ssh_symbol$hostname ]($style)"
@@ -218,15 +205,10 @@ style = "bold fg:base bg:peach"
 disabled = true
 
 [kotlin]
-format = "[ $symbol ($version)]($style)"
-symbol = ""
-style = "bold fg:base bg:maroon"
+disabled = true
 
 [kubernetes]
-disabled = false
-format = '[$symbol$context( \($namespace\) )]($style)'
-symbol = "󰠳"
-style = "bold fg:base bg:sky"
+disabled = true
 
 [line_break]
 disabled = false
@@ -295,9 +277,7 @@ disabled = true
 disabled = true
 
 [python]
-format = "[ $symbol $pyenv_prefix($version)($virtualenv)]($style)"
-symbol = "󰌠"
-style = "bold fg:base bg:maroon"
+disabled = true
 
 [quarto]
 disabled = true
@@ -360,9 +340,7 @@ symbol = ""
 style = "bold fg:base bg:maroon"
 
 [terraform]
-format = "[ $symbol ($version) - $workspace]($style)"
-symbol = "󱁢"
-style = "bold fg:base bg:mauve"
+disabled = true
 
 [time]
 format = "[  $time]($style)"
@@ -379,9 +357,7 @@ show_always = true
 format = "[  $user ]($style)"
 
 [vagrant]
-format = "[ $symbol($version)]($style)"
-style = "bold fg:base bg:mauve"
-disabled = false
+disabled = true
 
 [vlang]
 disabled = true
@@ -393,25 +369,22 @@ disabled = true
 disabled = true
 
 # Custom modules
-[custom.ansible]
-description = "Ansible version"
-command = "echo v$(echo $(ansible --version 2>/dev/null | head -n 1) | sd '[^0-9.]' '')"
-when = """ test -n "${ANSIBLE_HOME}" """
-files = [ "ansible.cfg" ]
-shell = "/bin/zsh"
-format = "[ $symbol ($output)]($style)"
-symbol = "󱂚"
-style = "bold fg:base bg:mauve"
-
 [custom.maven]
 description = "Maven version"
 command = "echo v$(echo $(mvn --version 2>/dev/null | head -n 1) | cut -f1 -d'(' | sd '[^0-9.]' '')"
-when = """ test -n "${MAVEN_HOME}" || test -n "${MVN_HOME}" || test -n "${M2_HOME}" """
-files = [ "pom.xml" ]
+detect_files = [ "pom.xml" ]
 shell = "/bin/zsh"
 format = "[ $symbol ($output)]($style)"
 symbol = ""
 style = "bold fg:base bg:blue"
+
+[custom.uv]
+# command = "uv run python --version | sed 's/Python //g'"
+command = "$(uv python find) --version | sed 's/Python //g'"
+detect_files = [ "uv.lock" ]
+format = "[ $symbol ($output)]($style)"
+symbol = "󰌠"
+style = "bold fg:base bg:maroon"
 
 # Catppuccin Themes
 [palettes.catppuccin_latte]
