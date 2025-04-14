@@ -98,6 +98,7 @@ cask "figma"
 cask "firefox@developer-edition"
 cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
+cask "github-copilot-for-xcode"
 cask "gitify"
 cask "imazing"
 cask "intellij-idea"
@@ -140,6 +141,36 @@ cask "webstorm"
 cask "whatsapp"
 cask "yubico-authenticator"
 cask "zotero"
+mas "AusweisApp", id: 948660805
+mas "Bitwarden", id: 1352778147
+mas "Cascadea", id: 1432182561
+mas "Compressor", id: 424390742
+mas "Cursor Pro", id: 1447043133
+mas "DaftCloud", id: 1320450034
+mas "eduVPN", id: 1317704208
+mas "Endel", id: 1346247457
+mas "Final Cut Pro", id: 424389933
+mas "Gestimer", id: 6447125648
+mas "Keystroke Pro", id: 1572206224
+mas "Klack", id: 6446206067
+mas "LanguageTool", id: 1534275760
+mas "Logic Pro", id: 634148309
+mas "Lumaly", id: 1573979983
+mas "Mirror Magnet", id: 1563698880
+mas "Motion", id: 434290957
+mas "Noir", id: 1592917505
+mas "Octotree", id: 1457450145
+mas "Reeder", id: 1529448980
+mas "Refined GitHub", id: 1519867270
+mas "SnippetsLab", id: 1006087419
+mas "Stecker", id: 6447288587
+mas "Streaks", id: 963034692
+mas "Structured", id: 1499198946
+mas "Things", id: 904280696
+mas "UnTrap", id: 1637438059
+mas "VPN Unlimited®", id: 694633015
+mas "WaterMinder", id: 1415257369
+mas "Xcode", id: 497799835
 vscode "42crunch.vscode-openapi"
 vscode "alefragnani.project-manager"
 vscode "ban.spellright"
@@ -159,32 +190,3 @@ vscode "seatonjiang.gitmoji-vscode"
 vscode "shardulm94.trailing-spaces"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "vivaxy.vscode-conventional-commits"
-mas "AusweisApp", id: 948660805
-mas "Bitwarden", id: 1352778147
-mas "Cascadea", id: 1432182561
-mas "Compressor", id: 424390742
-mas "Cursor Pro", id: 1447043133
-mas "DaftCloud", id: 1320450034
-mas "eduVPN", id: 1317704208
-mas "Endel", id: 1346247457
-mas "Final Cut Pro", id: 424389933
-mas "Gestimer", id: 6447125648
-mas "Keystroke Pro", id: 1572206224
-mas "Klack", id: 6446206067
-mas "LanguageTool", id: 1534275760
-mas "Logic Pro", id: 634148309
-mas "Lumaly", id: 1573979983
-mas "Mirror Magnet", id: 1563698880
-mas "Motion", id: 434290957
-mas "Noir", id: 1592917505
-mas "Reeder", id: 1529448980
-mas "Refined GitHub", id: 1519867270
-mas "SnippetsLab", id: 1006087419
-mas "Stecker", id: 6447288587
-mas "Streaks", id: 963034692
-mas "Structured", id: 1499198946
-mas "Things", id: 904280696
-mas "UnTrap", id: 1637438059
-mas "VPN Unlimited®", id: 694633015
-mas "WaterMinder", id: 1415257369
-mas "Xcode", id: 497799835
