@@ -1,5 +1,4 @@
 tap "charmbracelet/tap"
-tap "ggozad/formulas"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "jorgerojas26/lazysql"
