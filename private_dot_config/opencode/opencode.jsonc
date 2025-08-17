@@ -1,0 +1,85 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    // Update configuration
+    "autoupdate": false,
+    // Theme configuration
+    "theme": "system",
+    // Collaboration configuration
+    "share": "disabled",
+    // Global permission configuration
+    "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "allow"
+    },
+    // Instruction configuration
+    "instructions": ["CONTRIBUTING.md"],
+    // Provider configuration
+    "provider": {
+        "ollama": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Ollama (local)",
+            "options": {
+                "baseURL": "http://localhost:11434/v1"
+            },
+            "models": {
+                "gpt-oss:20b": {
+                    "name": "GPT OSS (20B)"
+                },
+                "qwen2.5-coder:7b": {
+                    "name": "Qwen 2.5 Coder (7B)"
+                }
+            }
+        }
+    },
+    // Model configuration
+    "model": "ollama/gpt-oss:20b",
+    "small_model": "ollama/qwen2.5-coder:7b",
+    // Mode configuration
+    "mode": {
+        "build": {
+            "mode": "primary",
+            "tools": {
+                "bash": true,
+                "edit": true,
+                "write": true,
+                "read": true,
+                "grep": true,
+                "glob": true,
+                "list": true,
+                "patch": true,
+                "todowrite": true,
+                "todoread": true,
+                "webfetch": true
+            },
+            "permission": {
+                "edit": "allow",
+                "bash": "allow",
+                "webfetch": "allow"
+            }
+        },
+        "plan": {
+            "mode": "primary",
+            "tools": {
+                "bash": false,
+                "edit": false,
+                "write": false,
+                "read": true,
+                "grep": true,
+                "glob": true,
+                "list": true,
+                "patch": false,
+                "todowrite": false,
+                "todoread": true,
+                "webfetch": true
+            },
+            "permission": {
+                "edit": "deny",
+                "bash": "deny",
+                "webfetch": "allow"
+            }
+        }
+    },
+    // Custom agent configuration
+    "agent": {}
+}
