@@ -32,6 +32,11 @@
 .minikube
 .mplayer
 .npm
+.nvm/.cache
+.nvm/alias
+.nvm/nvm-exec
+.nvm/nvm.sh
+.nvm/versions
 .oracle_jre_usage
 .pnpm
 .pnpm-state
@@ -131,6 +136,11 @@ OrbStack
 .yarnrc
 .bun
 .bashrc
+.bash_history
+.claude
+.claude.json.backup
+.claude.json
+.junie
 .ollama
 .bundle
 .orbstack
@@ -139,9 +149,12 @@ OrbStack
 .vscode-oss
 .electron-gyp
 .continue
-.nvm
 .moderne
 .rewrite-cache
 .pyenv
+.python_history
 .key
 .sentry**
+.skiko
+.matplotlib
+FakinTheFunk
