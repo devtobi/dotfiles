@@ -1,6 +1,6 @@
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
 	format = ssh
 [tag]
-	gpgsign = false
+	gpgsign = true
