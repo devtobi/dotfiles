@@ -15,7 +15,7 @@ alias ollama-stop="brew services stop ollama"
 
 # Development aliases
 alias python="python3"
-alias npm="npmc"
-alias pnpm="npmc --pnpm-alias"
-alias bun="npmc --bun-alias"
+# alias npm="npmc"
+# alias pnpm="npmc --pnpm-alias"
+# alias bun="npmc --bun-alias"
 alias code="codium"
