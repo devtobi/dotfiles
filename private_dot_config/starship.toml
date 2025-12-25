@@ -41,7 +41,7 @@ $line_break\
 $character
 """
 
-palette = "catppuccin_latte"
+palette = "catppuccin_frappe"
 add_newline = true
 command_timeout = 2000
 
@@ -74,9 +74,9 @@ disabled = true
 disabled = true
 
 [cmd_duration]
-min_time = 0
+min_time = 2_000
 show_milliseconds = true
-show_notifications = true
+show_notifications = false
 format = "[ 󰚭 $duration]($style)"
 style = "bold fg:base bg:peach"
 

@@ -11,7 +11,6 @@ ohmyzsh/ohmyzsh path:plugins/git-auto-fetch
 ohmyzsh/ohmyzsh path:plugins/gitignore
 ohmyzsh/ohmyzsh path:plugins/macos
 ohmyzsh/ohmyzsh path:plugins/safe-paste
-ohmyzsh/ohmyzsh path:plugins/starship
 ohmyzsh/ohmyzsh path:plugins/sudo
 ohmyzsh/ohmyzsh path:plugins/thefuck
 ohmyzsh/ohmyzsh path:plugins/tldr
@@ -75,4 +74,3 @@ peterhurford/git-it-on.zsh
 skx/sysadmin-util
 # unixorn/jpb.zshplugin # currently not working
 unixorn/tumult.plugin.zsh
-MichaelAquilina/zsh-auto-notify
