@@ -15,8 +15,6 @@ brew "bat-extras"
 brew "btop"
 brew "chezmoi"
 brew "cmake"
-brew "ripgrep"
-brew "codex"
 brew "coreutils"
 brew "ctop"
 brew "curl"
@@ -45,6 +43,7 @@ brew "nvm"
 brew "pkgconf"
 brew "poppler"
 brew "procs"
+brew "ripgrep"
 brew "rmlint"
 brew "sd"
 brew "sevenzip"
@@ -76,8 +75,10 @@ cask "adguard"
 cask "affinity"
 cask "airbattery"
 cask "android-platform-tools"
+cask "ausweisapp"
 cask "balenaetcher"
 cask "bartender"
+cask "bitwarden"
 cask "blackhole-2ch"
 cask "bruno"
 cask "carbon-copy-cloner"
@@ -146,8 +147,6 @@ cask "webstorm"
 cask "whatsapp"
 cask "yubico-authenticator"
 cask "zotero"
-mas "AusweisApp", id: 948660805
-mas "Bitwarden", id: 1352778147
 mas "Cascadea", id: 1432182561
 mas "Compressor", id: 424390742
 mas "Cursor Pro", id: 1447043133
@@ -158,7 +157,6 @@ mas "Final Cut Pro", id: 424389933
 mas "Gestimer", id: 6447125648
 mas "Keystroke Pro", id: 1572206224
 mas "Klack", id: 6446206067
-mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Lumaly", id: 1573979983
 mas "Mirror Magnet", id: 1563698880
