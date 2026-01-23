@@ -104,13 +104,11 @@ cask "insta360-link-controller"
 cask "intellij-idea"
 cask "istat-menus"
 cask "keka"
-cask "languagetool-desktop"
 cask "little-snitch"
 cask "lookaway"
 cask "lunar"
 cask "mac-mouse-fix"
 cask "mactex-no-gui"
-cask "macupdater"
 cask "melodics"
 cask "mixed-in-key"
 cask "mp3tag"
@@ -165,7 +163,6 @@ mas "SnippetsLab", id: 1006087419
 mas "Stecker", id: 6447288587
 mas "Streaks", id: 963034692
 mas "Structured", id: 1499198946
-mas "Swift Playground", id: 1496833156
 mas "Things", id: 904280696
 mas "UnTrap", id: 1637438059
 mas "VPN Unlimited®", id: 694633015

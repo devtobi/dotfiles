@@ -87,11 +87,9 @@ no_self_update = true
 
 # Custom commands
 [commands]
-# "Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-# "Custom command using interactive shell (unix)" = "-i vim_upgrade"
 "Antidote updates" = "source $(brew --prefix antidote)/share/antidote/antidote.zsh && antidote update"
 "Ollama model updates" = "ollama list | awk 'NR>1 && !/reviewer/ {system(\"ollama pull \"$1)}'"
-"MacUpdater updates" = "macupdater_client scan && macupdater_client update --force-quit-running-apps --force-major-version-update"
+
 
 [python]
 # enable_pip_review = true                         ###disabled by default
