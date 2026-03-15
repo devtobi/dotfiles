@@ -9,8 +9,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# Tools
-export PATH=/Applications/MacUpdater.app/Contents/Resources:$PATH
-
 # Own scripts
 export PATH=/$HOME/.scripts:$PATH
