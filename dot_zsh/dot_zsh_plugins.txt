@@ -48,7 +48,7 @@ belak/zsh-utils path:completion
 
 # Plugins from ohmyzsh from https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
 ## Aliases
-# ohmyzsh/ohmyzsh path:plugins/common-aliases
+ohmyzsh/ohmyzsh path:plugins/common-aliases
 ohmyzsh/ohmyzsh path:plugins/git-commit
 ohmyzsh/ohmyzsh path:plugins/git-extras
 ohmyzsh/ohmyzsh path:plugins/history
@@ -68,5 +68,5 @@ zsh-users/zsh-autosuggestions
 unixorn/git-extra-commands
 peterhurford/git-it-on.zsh
 skx/sysadmin-util
-unixorn/jpb.zshplugin # currently not working
+# unixorn/jpb.zshplugin # currently not working
 unixorn/tumult.plugin.zsh
