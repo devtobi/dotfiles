@@ -121,6 +121,7 @@ cask "pycharm"
 cask "raspberry-pi-imager"
 cask "raycast"
 cask "rekordbox"
+cask "rnnoise"
 cask "sf-symbols"
 cask "synology-drive"
 cask "synology-image-assistant"
@@ -129,6 +130,7 @@ cask "timemachineeditor"
 cask "timemator"
 cask "typeface"
 cask "ungoogled-chromium"
+cask "updatest"
 cask "voiceink"
 cask "voicemod"
 cask "vscodium"
@@ -153,6 +155,7 @@ mas "Octotree", id: 1457450145
 mas "Pages", id: 361309726
 mas "Reeder", id: 1529448980
 mas "Refined GitHub", id: 1519867270
+mas "Shoop Cashback & Gutscheine", id: 1568244961
 mas "SnippetsLab", id: 1006087419
 mas "Stecker", id: 6447288587
 mas "Streaks", id: 963034692
