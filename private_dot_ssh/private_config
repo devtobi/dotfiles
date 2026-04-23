@@ -3,16 +3,11 @@ Include ~/.orbstack/ssh/config
 Host *
     IgnoreUnknown UseKeychain
 
-Host github.com gitlab.lrz.de
+Host github.com
     User git
     PreferredAuthentications publickey
     ForwardAgent yes
     UseKeychain yes
     AddKeysToAgent yes
     IdentitiesOnly yes
-
-Host github.com
     IdentityFile ~/.ssh/id_ed25519_github
-
-Host gitlab.lrz.de
-    IdentityFile ~/.ssh/id_ed25519_gitlab_lrz
