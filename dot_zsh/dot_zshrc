@@ -1,8 +1,9 @@
 # Initialize homebrew variables
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Environment variables
+# Environment variables and secrets
 source $ZDOTDIR/env.zsh
+source $ZDOTDIR/secrets.zsh
 
 # Path configuration
 source $ZDOTDIR/path.zsh

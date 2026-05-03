@@ -91,6 +91,7 @@ Brewfile.lock.json
 .zsh/.zcompdump**
 .zsh/.zsh_history
 .zsh/.zsh_plugins.zsh
+.zsh/secrets.zsh
 .config/.isolated-storage
 .config/.mono
 .config/act
@@ -124,6 +125,7 @@ Brewfile.lock.json
 .config/wtf/log.txt
 .config/.wrangler
 .config/yarn
+.ssh/agent
 .ssh/authorized_keys
 .ssh/id_*
 .ssh/known_hosts
@@ -158,3 +160,4 @@ OrbStack
 .skiko
 .matplotlib
 FakinTheFunk
+.nowplaying
