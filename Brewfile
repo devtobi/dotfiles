@@ -15,6 +15,7 @@ brew "btop"
 brew "chezmoi"
 brew "coreutils"
 brew "ctop"
+brew "ctx7"
 brew "curl"
 brew "fastfetch"
 brew "fd"
@@ -159,6 +160,7 @@ mas "Refined GitHub", id: 1519867270
 mas "Shoop Cashback & Gutscheine", id: 1568244961
 mas "SnippetsLab", id: 1006087419
 mas "Stecker", id: 6447288587
+mas "Steuerbot", id: 1352913300
 mas "Streaks", id: 963034692
 mas "Structured", id: 1499198946
 mas "Things", id: 904280696

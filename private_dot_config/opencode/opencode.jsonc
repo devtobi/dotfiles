@@ -1,0 +1,286 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // === Provider configuration ===
+  "enabled_providers": ["ollama", "opencode", "opencode-go"],
+  "provider": {
+    "opencode": {
+      "name": "OpenCode Zen (Pay-As-You-Go)",
+      "options": {
+        "setCacheKey": true,
+        // "chunkTimeout": 5000,
+        // "timeout": 60000
+      },
+      "whitelist": [
+        "big-pickle",
+        "minimax-m2.5-free"
+      ],
+    },
+    "opencode-go": {
+      "name": "OpenCode Go (Subscription)",
+      "options": {
+        "setCacheKey": true,
+        // "chunkTimeout": 2000,
+        // "timeout": 60000
+      },
+      "whitelist": [
+        "deepseek-v4-pro",
+        "minimax-m2.5"
+      ],
+    },
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (Local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+        "setCacheKey": false,
+        "chunkTimeout": 2000,
+        "timeout": 30000
+      },
+      "models": {
+        "gemma4:latest": {
+          "name": "Gemma 4",
+          "family": "Gemma",
+          "limit": {
+            "context": 128000,
+            "output": 128000,
+            "input": 128000
+          },
+          "temperature": true,
+          "reasoning": true,
+          "tool_call": true,
+          "interleaved": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "audio", "video", "pdf"],
+            "output": ["text"],
+          },
+          "release_date": "02-04-2026"
+        },
+        "qwen3.5:latest": {
+          "name": "Qwen 3.5",
+          "family": "Qwen",
+          "limit": {
+            "context": 262144,
+            "output": 262144,
+            "input": 262144
+          },
+          "temperature": true,
+          "reasoning": true,
+          "tool_call": true,
+          "interleaved": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image", "video", "pdf"],
+            "output": ["text"]
+          },
+          "release_date": "16-02-2026"
+        }
+      }
+    }
+  },
+  // === Model configuration ===
+  "model": "opencode-go/deepseek-v4-pro",
+  "small_model": "opencode/big-pickle",
+  // === Instructions and command configuration ===
+  "instructions": [
+    "https://opencode.school/api/instructions/crafty-operator-2589",
+    "CONTRIBUTING.md",
+  ],
+  // "command": {}, // also possible via 'commands' directory
+  // === Default permission configuration ===
+  "permission": {
+    "*": "deny",
+    "read": "deny", // read a file
+    "edit": "deny", // edit files (edit, write, patch)
+    "list": "deny", // list files
+    "glob": "deny", // globbing of files (using glob pattern)
+    "grep": "deny", // grepping of files (using regex)
+    "task": "deny", // start subagents
+    "skill": "deny", // load a skill
+    "lsp": "deny", // execute LSP-Queries (Language Server)
+    "webfetch": "deny", // load data from a URL
+    "websearch": "deny", // execute web search
+    "external_directory": "deny", // execute tools in external directories
+    "doom_loop": "deny", // triggered after 3 recurring tool calls with same input
+    "todowrite": "deny", // create todo lists for tracking task progress
+    "question": "deny", // ask questions to the user
+    "bash": "deny" // execute bash commands
+  },
+  // === MCP configuration ===
+  // "mcp": {},
+  // === Plugin configuration ===
+  // "plugin": [],
+  // === Agent configuration ===
+  "default_agent": "plan",
+  "agent": {
+    "plan": {
+      "model": "opencode-go/deepseek-v4-pro",
+      "color": "info",
+      "permission": {
+        "*": "deny",
+        "read": "allow",
+        "edit": "deny",
+        "list": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "task": "ask",
+        "skill": "allow",
+        "lsp": "allow",
+        "webfetch": "allow",
+        "websearch": "allow",
+        "external_directory": "ask",
+        "doom_loop": "ask",
+        "todowrite": "allow",
+        "question": "allow",
+        "bash": {
+          "*": "ask",
+
+          // filesystem navigation / inspection
+          "pwd": "allow",
+          "ls": "allow",
+          "find": "allow",
+          "fd": "allow",
+          "tree": "allow",
+          "realpath": "allow",
+          "readlink": "allow",
+
+          // file viewing
+          "cat": "allow",
+          "head": "allow",
+          "tail": "allow",
+          "less": "allow",
+          "more": "allow",
+          "wc": "allow",
+          "file": "allow",
+          "stat": "allow",
+
+          // search / text processing
+          "grep": "allow",
+          "rg": "allow",
+          "cut": "allow",
+          "uniq": "allow",
+          "tr": "allow",
+          "column": "allow",
+
+          // structured data
+          "jq": "allow",
+          "yq": "allow",
+
+          // environment / shell introspection
+          "env": "allow",
+          "printenv": "allow",
+          "which": "allow",
+          "whereis": "allow",
+          "type": "allow",
+          "command -v": "allow",
+
+          // git read-only
+          "git status": "allow",
+          "git diff": "allow",
+          "git log": "allow",
+          "git show": "allow",
+          "git branch": "allow",
+          "git rev-parse": "allow",
+          "git grep": "allow",
+          "git ls-files": "allow",
+          "git blame": "allow",
+          "git reflog": "allow",
+          "git remote": "allow",
+          "git tag": "allow",
+          "git stash list": "allow",
+          "git config --get": "allow",
+
+          // process / system inspection
+          "ps": "allow",
+          "pgrep": "allow",
+          "top": "allow",
+          "lsof": "allow",
+
+          // disk / system info
+          "du": "allow",
+          "df": "allow",
+          "uname": "allow",
+          "hostname": "allow",
+          "whoami": "allow",
+          "id": "allow",
+          "groups": "allow",
+          "date": "allow",
+          "uptime": "allow",
+
+          // language / runtime version inspection
+          "node --version": "allow",
+          "npm --version": "allow",
+          "yarn --version": "allow",
+          "pnpm --version": "allow",
+          "bun --version": "allow",
+          "uv --version": "allow",
+          "python --version": "allow",
+          "python3 --version": "allow",
+          "pip --version": "allow",
+          "pip3 --version": "allow",
+          "sdk version": "allow",
+          "java --version": "allow",
+          "javac --version": "allow",
+          "kotlin -version": "allow",
+          "kotlinc -version": "allow",
+          "mvn --version": "allow",
+          "gradle --version": "allow",
+
+          // dependency inspection
+          "npm list": "allow",
+          "yarn list": "allow",
+          "pnpm list": "allow",
+          "bun list": "allow",
+          "uv pip list": "allow",
+          "pip list": "allow",
+          "pip3 list": "allow",
+          "mvn dependency:tree": "allow",
+          "gradle dependencies": "allow",
+
+          // archive inspection
+          "tar -tf": "allow",
+          "unzip -l": "allow",
+
+          // networking
+          "curl": "ask",
+          "wget": "ask",
+          "ping": "allow",
+          "nslookup": "allow",
+          "dig": "allow",
+
+          // containers
+          "docker ps": "allow",
+          "docker images": "allow",
+          "docker compose ps": "allow",
+          "kubectl get": "allow",
+          "kubectl describe": "allow"
+        }
+      },
+    }
+  }, // also possible via 'agents' directory
+  // === Miscellaneous configuration ===
+  "username": "devtobi",
+  "shell": "/bin/zsh",
+  "snapshot": true,
+  "formatter": true, // see https://opencode.ai/docs/formatters
+  "lsp": true, // see https://opencode.ai/docs/lsp/
+  "compaction": {
+    "auto": true,
+    "prune": true,
+  },
+  "watcher": {
+    "ignore": ["node_modules/**", "dist/**", "target/**", ".git/**", ".idea/**"]
+  },
+  "share": "disabled",
+  "server": {
+    "mdns": false
+  },
+  "autoupdate": false,
+  "logLevel": "ERROR",
+  // === Experimental configuration ===
+  "experimental": {
+    "openTelemetry": false,
+    "continue_loop_on_deny": true,
+    "mcp_timeout": 30000
+  }
+}
