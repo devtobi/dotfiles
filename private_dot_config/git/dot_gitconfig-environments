@@ -1,8 +1,5 @@
-# Set GitHub configuration as default
-[include]
-  	path = ~/.config/git/envs/.gitconfig-github
-# Include additional configurations based on path
-[includeIf "gitdir:~/Developer/Repositories/GitLab/"]
-  	path = ~/.config/git/envs/.gitconfig-gitlab-lrz
-[includeIf "gitdir:~/Developer/Repositories/Forgejo/"]
-  	path = ~/.config/git/envs/.gitconfig-forgejo
+# Include environment configurations based on remote URL
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+	path = ~/.config/git/envs/.gitconfig-github
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+	path = ~/.config/git/envs/.gitconfig-github

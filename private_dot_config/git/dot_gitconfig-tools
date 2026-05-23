@@ -1,3 +1,9 @@
+# Configuration for lfs (Large File System)
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 # Required to work with bun lockfiles
 [diff "lockb"]
 	textconv = bun

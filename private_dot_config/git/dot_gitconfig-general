@@ -1,9 +1,13 @@
+[user]
+	useConfigOnly = true
 [core]
 	autocrlf = input
 	excludesfile = ~/.config/git/.gitignore
 	attributesfile = ~/.config/git/.gitattributes
 [init]
 	defaultBranch = main
+[push]
+	default = simple
 [pull]
 	ff = only
 [merge]
