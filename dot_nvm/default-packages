@@ -1,3 +1,11 @@
 corepack
 npm
 pnpm
+bun
+@antfu/ni
+dclint
+kill-port
+npm-check-updates
+npm-confirm
+npm-deprecated-check
+serve

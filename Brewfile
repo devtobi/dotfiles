@@ -3,6 +3,8 @@ tap "lihaoyun6/tap", trusted: true
 tap "sdkman/tap", trusted: true
 # Search tool like grep, but optimized for programmers
 brew "ack"
+# Run your GitHub Actions locally
+brew "act"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Static checker for GitHub Actions workflow files
@@ -35,6 +37,10 @@ brew "ctop"
 brew "ctx7"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Portable devkit for CI/CD pipelines
+brew "dagger"
+# Tool for exploring each layer in a docker image
+brew "dive"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
@@ -53,8 +59,18 @@ brew "git-extras"
 brew "git-lfs"
 # Audit git repos for secrets
 brew "gitleaks"
+# Gorgeous metric visualizations and dashboards for timeseries databases
+brew "grafana"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Kubernetes package manager
 brew "helm"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Simple terminal UI for git commands
@@ -85,6 +101,8 @@ brew "opencode"
 brew "pandoc"
 # Modern replacement for ps written in Rust
 brew "procs"
+# Service monitoring system and time series database
+brew "prometheus"
 # Extremely fast tool to remove dupes and other lint from your filesystem
 brew "rmlint"
 # Intuitive find & replace CLI
@@ -153,6 +171,8 @@ cask "bruno"
 cask "carbon-copy-cloner"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # Disk space visualiser
