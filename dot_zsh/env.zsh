@@ -4,3 +4,4 @@ export COREPACK_ENABLE_AUTO_PIN=0 # disable auto pin to not set packageManager f
 export NI_CONFIG_FILE=$XDG_CONFIG_HOME/ni/nirc
 export DISABLE_TELEMETRY=1
 export OPENCODE_ENABLE_EXA=1
+export HOMEBREW_NO_ASK=1

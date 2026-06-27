@@ -1,5 +1,6 @@
 tap "kaplanelad/tap", trusted: true
 tap "lihaoyun6/tap", trusted: true
+tap "modem-dev/tap"
 tap "sdkman/tap", trusted: true
 # Search tool like grep, but optimized for programmers
 brew "ack"
@@ -51,8 +52,6 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
 # Small git utilities
 brew "git-extras"
 # Git extension for versioning large files
@@ -145,6 +144,8 @@ brew "yq"
 brew "zoxide"
 # Intercept any risky patterns (default or defined by you) and prompt you a small challenge for double verification
 brew "kaplanelad/tap/shellfirm"
+# Desktop-inspired terminal diff viewer for agent-authored changesets
+brew "modem-dev/tap/hunk", trusted: true
 # SDKMAN! the Software Development Kit Manager
 brew "sdkman/tap/sdkman-cli"
 # Stand alone ad blocker

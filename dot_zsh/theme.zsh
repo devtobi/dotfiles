@@ -13,6 +13,7 @@ GIT_CONFIG_PATH=$HOME/.gitconfig
 STARSHIP_CONFIG_PATH=$XDG_CONFIG_HOME/starship.toml
 TMUX_CONFIG_PATH=$XDG_CONFIG_HOME/tmux/tmux.conf
 GH_DASH_CONFIG_PATH=$XDG_CONFIG_HOME/gh-dash
+HUNK_CONFIG_PATH=$XDG_CONFIG_HOME/hunk/config.toml
 
 # fzf theme definitions
 FZF_LIGHT_THEME=" \
@@ -65,8 +66,8 @@ export FZF_DEFAULT_OPTS=$FZF_THEME
 # Set theme for lazygit
 export LG_CONFIG_FILE=$LAZYGIT_DIR/config.yml,$LAZYGIT_DIR/${(L)THEME_BASE}-${(L)NEW_THEME}.yml
 
-# Set theme for delta (git plugin)
-sd ${(L)OLD_THEME} ${(L)NEW_THEME} $GIT_CONFIG_PATH
+# Set theme for hunk (git plugin)
+sd ${(L)OLD_THEME} ${(L)NEW_THEME} $HUNK_CONFIG_PATH
 
 # Set theme for starship
 sd "\"${(L)THEME_BASE}_${(L)OLD_THEME}\"" "\"${(L)THEME_BASE}_${(L)NEW_THEME}\"" $STARSHIP_CONFIG_PATH

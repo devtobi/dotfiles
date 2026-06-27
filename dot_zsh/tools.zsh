@@ -18,9 +18,6 @@ export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 # OrbStack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-# batdiff configuration (to use delta)
-export BATDIFF_USE_DELTA=true
-
 # Setup cache completion directory for ohmyzsh plugins
 export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
