@@ -1,6 +1,5 @@
 tap "kaplanelad/tap", trusted: true
 tap "lihaoyun6/tap", trusted: true
-tap "modem-dev/tap"
 tap "sdkman/tap", trusted: true
 # Search tool like grep, but optimized for programmers
 brew "ack"
@@ -64,6 +63,8 @@ brew "grafana"
 brew "hadolint"
 # Kubernetes package manager
 brew "helm"
+# Review-first terminal diff viewer for agent-authored changesets
+brew "hunk"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -144,8 +145,6 @@ brew "yq"
 brew "zoxide"
 # Intercept any risky patterns (default or defined by you) and prompt you a small challenge for double verification
 brew "kaplanelad/tap/shellfirm"
-# Desktop-inspired terminal diff viewer for agent-authored changesets
-brew "modem-dev/tap/hunk", trusted: true
 # SDKMAN! the Software Development Kit Manager
 brew "sdkman/tap/sdkman-cli"
 # Stand alone ad blocker
@@ -312,7 +311,7 @@ mas "Compressor", id: 424390742
 mas "Cursor Pro", id: 1447043133
 mas "DaftCloud", id: 1320450034
 mas "Endel", id: 1346247457
-mas "Final Cut Pro", id: 424389933
+mas "Final Cut Pro", id: 424389933
 mas "Gestimer", id: 6447125648
 mas "Keystroke Pro", id: 1572206224
 mas "Klack", id: 6446206067
