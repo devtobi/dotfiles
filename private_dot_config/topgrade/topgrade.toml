@@ -87,7 +87,6 @@ no_self_update = true
 
 # Custom commands
 [commands]
-"Antidote updates" = "source $(brew --prefix antidote)/share/antidote/antidote.zsh && antidote update"
 
 
 [python]
