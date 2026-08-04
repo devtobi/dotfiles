@@ -12,8 +12,8 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
 
 # SDKMAN
-export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
-[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # OrbStack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :

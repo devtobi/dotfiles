@@ -1,6 +1,4 @@
 tap "kaplanelad/tap", trusted: true
-tap "lihaoyun6/tap", trusted: true
-tap "sdkman/tap", trusted: true
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Run your GitHub Actions locally
@@ -27,6 +25,8 @@ brew "bat"
 brew "bat-extras"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Read-only developer endpoint scanner for supply-chain exposure
+brew "bumblebee"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GNU File, Shell, and Text utilities
@@ -69,6 +69,8 @@ brew "hunk"
 brew "k3d"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Static analysis tool for Kubernetes YAML files and Helm charts
+brew "kube-linter"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Lazier way to manage everything docker
@@ -141,18 +143,16 @@ brew "yamllint"
 brew "yazi"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Find security issues in GitHub Actions setups
+brew "zizmor"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Intercept any risky patterns (default or defined by you) and prompt you a small challenge for double verification
 brew "kaplanelad/tap/shellfirm"
-# SDKMAN! the Software Development Kit Manager
-brew "sdkman/tap/sdkman-cli"
 # Stand alone ad blocker
 cask "adguard"
 # Image editing and design software
 cask "affinity"
-# Get the battery level of all your devices on your Mac.
-cask "lihaoyun6/tap/airbattery"
 # Official eID-Client of the Federal Government of Germany
 cask "ausweisapp"
 # Integrated CAD, CAM, CAE, and PCB software
