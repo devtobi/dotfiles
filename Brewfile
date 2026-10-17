@@ -45,6 +45,8 @@ brew "dive"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -157,8 +159,6 @@ cask "affinity"
 cask "ausweisapp"
 # Integrated CAD, CAM, CAE, and PCB software
 cask "autodesk-fusion"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
 # Menu bar icon organiser
@@ -175,8 +175,6 @@ cask "chatgpt"
 cask "claude-code"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
-# Disk space visualiser
-cask "daisydisk"
 # API documentation browser and code snippet manager
 cask "dash@6"
 # Databases and SQL IDE
@@ -191,8 +189,6 @@ cask "dorso"
 cask "downie"
 # Assign keys, and then decorate and label them
 cask "elgato-stream-deck"
-# DJ software suite
-cask "engine-dj"
 # Calendar software
 cask "fantastical"
 # Audio playback
@@ -216,10 +212,6 @@ cask "imazing"
 cask "insta360-link-controller"
 # Java IDE by JetBrains
 cask "intellij-idea"
-# System monitoring app
-cask "istat-menus"
-# File archiver
-cask "keka"
 # Host-based application firewall
 cask "little-snitch"
 # Open-source cross-platform alternative to AirDrop
@@ -230,8 +222,10 @@ cask "lookaway"
 cask "loopback"
 # Adaptive brightness for external displays
 cask "lunar"
-# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
-cask "mac-mouse-fix"
+# Archive manager
+cask "macpacker"
+# Tool to create bootable USB installers
+cask "macusb"
 # Helps you learn to play your instrument
 cask "melodics"
 # Spreadsheet software
@@ -240,12 +234,8 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
-# Display MIDI signals going in and out of your computer
-cask "midi-monitor"
 # Harmonic mixing for DJs and music producers
 cask "mixed-in-key"
-# Port of MP3Gain and AACGain
-cask "mp3gain-express"
 # Tool for editing metadata of audio files including MP3, FLAC, OGG, and more
 cask "mp3tag"
 # Administration tool for Native Instruments products
@@ -270,8 +260,6 @@ cask "permute"
 cask "pycharm"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
-# Control your tools with a few keystrokes
-cask "raycast"
 # Free Dj app to prepare and manage your music files
 cask "rekordbox"
 # Real-time Noise Suppression Plugin
@@ -298,6 +286,8 @@ cask "updatest"
 cask "voiceink"
 # Real-time voice changer and soundboard
 cask "voicemod"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
 # JavaScript IDE
@@ -311,7 +301,7 @@ mas "Compressor", id: 424390742
 mas "Cursor Pro", id: 1447043133
 mas "DaftCloud", id: 1320450034
 mas "Endel", id: 1346247457
-mas "Final Cut Pro", id: 424389933
+mas "Final Cut Pro", id: 424389933
 mas "Gestimer", id: 6447125648
 mas "Keystroke Pro", id: 1572206224
 mas "Klack", id: 6446206067
@@ -321,6 +311,7 @@ mas "Mirror Magnet", id: 1563698880
 mas "Motion", id: 434290957
 mas "Noir", id: 1592917505
 mas "Octotree", id: 1457450145
+mas "OpenVox – Local Voice AI", id: 6758789314
 mas "Pages", id: 361309726
 mas "Reeder", id: 1529448980
 mas "Refined GitHub", id: 1519867270
