@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-browser.dev/schema.json",
+  "debug": false,
+
+  "_provider": "ios",
+  "_device": "iPhone 18 Pro",
+
+  "ignoreHttpsErrors": false,
+  "clearCaCert": true,
+  "useSystemCa": false,
+  "contentBoundaries": true,
+  "allowFileAccess": false,
+  "maxOutput": 50000,
+  "actionPolicy": "/Users/tobias/.agent-browser/policy.json",
+  "confirmActions": "network,state",
+  "confirmInteractive": true,
+  "pinTab": true,
+
+  "headed": false,
+  "idleTimeout": "3m",
+  "enable": [],
+  "webgpu": true,
+  "annotate": false,
+  "screenshotQuality": 100,
+  "colorScheme": "no-preference"
+}

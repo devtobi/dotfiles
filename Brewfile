@@ -19,6 +19,8 @@ brew "xz"
 brew "agent-browser"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
+# Automation for Apps
+brew "appium"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
@@ -171,8 +173,6 @@ cask "bruno"
 cask "carbon-copy-cloner"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Terminal-based AI coding assistant
-cask "claude-code"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # API documentation browser and code snippet manager
@@ -200,7 +200,7 @@ cask "focusrite-control-2"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# GitHub notifications on your menu bar
+# Git notifications on your menu bar
 cask "gitify"
 # Free and open-source media player
 cask "iina"
@@ -242,6 +242,8 @@ cask "mp3tag"
 cask "native-access"
 # Tool to scan and monitor the network
 cask "network-radar"
+# Keyboard configurator for NuPhy devices
+cask "nuphyio"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -290,6 +292,8 @@ cask "voicemod"
 cask "vorssaint"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
+# Video communication and virtual meeting platform
+cask "webex"
 # JavaScript IDE
 cask "webstorm"
 # Native desktop client for WhatsApp
