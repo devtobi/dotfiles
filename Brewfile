@@ -29,6 +29,8 @@ brew "bat-extras"
 brew "btop"
 # Read-only developer endpoint scanner for supply-chain exposure
 brew "bumblebee"
+# CLI tool for analyzing Claude Code usage from local JSONL files
+brew "ccusage"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GNU File, Shell, and Text utilities

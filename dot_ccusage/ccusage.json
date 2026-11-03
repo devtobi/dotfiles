@@ -1,0 +1,20 @@
+{
+	"$schema": "https://ccusage.com/config-schema.json",
+    "defaults": {
+        "debug": false,
+        "all": false,
+        "breakdown": true,
+        "mode": "auto",
+        "order": "desc",
+        "pricingOverrides": {
+            "big-pickle": {
+				"inputCostPerToken": 0,
+				"outputCostPerToken": 0,
+				"cacheReadInputTokenCost": 0,
+                "cacheCreationInputTokenCost": 0,
+                "maxInputTokens": 200000
+			}
+        },
+        "timezone": "Europe/Berlin"
+    }
+}
