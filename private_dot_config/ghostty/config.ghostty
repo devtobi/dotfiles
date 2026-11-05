@@ -28,6 +28,7 @@ macos-auto-secure-input = true
 macos-secure-input-indication = true
 macos-icon = xray
 macos-shortcuts = deny
+macos-option-as-alt = true
 shell-integration-features = cursor, sudo, title, ssh-env, ssh-terminfo
 auto-update = off
 notify-on-command-finish = unfocused

@@ -1,0 +1,104 @@
+worktree-path = "{{ repo_path }}/.worktrees/{{ branch | sanitize }}"
+skip-commit-generation-prompt = false # required when commit.generation.command is not set
+
+[pre-start]
+cmux = "cmux new-workspace --name {{ repo | sanitize }}/{{ branch | sanitize }} --cwd {{ worktree_path }} --focus true"
+
+[pre-switch]
+cmux = """
+WS=$(cmux --json list-workspaces 2>/dev/null \\
+  | jq -r --arg t '{{ repo | sanitize }}/{{ branch | sanitize }}' \\
+      '.workspaces[] | select(.title == $t) | .ref' | head -1)
+[ -n "$WS" ] && cmux select-workspace --workspace "$WS" || true
+"""
+
+[pre-remove]
+cmux = """
+WS=$(cmux --json list-workspaces 2>/dev/null \\
+  | jq -r --arg t '{{ repo | sanitize }}/{{ branch | sanitize }}' \\
+      '.workspaces[] | select(.title == $t) | .ref' | head -1)
+[ -n "$WS" ] && cmux close-workspace --workspace "$WS" --force || true
+"""
+
+[[post-start]]
+copy = "wt step copy-ignored"
+
+[commit]
+stage = "all"
+
+[commit.generation]
+command = "opencode run -m anthropic/claude-haiku-5-5 --variant fast"
+template-append = """
+- Explain the rationale in the body, not just the change
+- Reference the related issue ID in the body
+"""
+
+[list]
+summary = true    # Enable LLM branch summaries (requires [commit.generation])
+full = true       # Show CI status and LLM summaries (--full)
+branches = true   # Include branches without worktrees (--branches)
+remotes = false   # Include remote-only branches (--remotes)
+# url = "http://localhost:{{ branch | hash_port }}" # can only be set in project-specific configuration
+
+columns = ["branch", "status", "ahead-behind", "upstream", "url", "ci", "age", "message", "summary"]
+
+[merge]
+squash = true
+commit = true
+rebase = true
+remove = true
+verify = true      # Run project hooks (--no-hooks to skip)
+ff = true          # Fast-forward merge (--no-ff to create a merge commit instead)
+
+[remove]
+delete-branch = true
+
+[switch]
+cd = false          # Off due to cmux hooks integrations
+
+[switch.picker]
+preview = true   # Show the preview panel on open (Alt-p toggles)
+
+[step.copy-ignored]
+exclude = [".venv/"]     # Excludes for copying gitignored file to new worktrees with "wt step copy-ignored"
+
+[aliases]
+manual-merge = '''WORKTRUNK_VERBOSE=1 WORKTRUNK_COMMIT__GENERATION__COMMAND='f=$(mktemp); printf "\n\n" > "$f"; sed "s/^/# /" >> "$f"; ${EDITOR:-vi} "$f" < /dev/tty > /dev/tty; grep -v "^#" "$f"' wt merge'''
+commit = "wt step commit"
+squash = "wt step squash"
+rebase = "wt step rebase"
+push = "wt step push && git push"
+diff = "wt step diff"
+copy-ignored = "wt step copy-ignored"
+prune = "wt step prune --min-age=0s"
+up = '''
+git fetch --all --prune; wt step for-each -- sh -c '
+  git rev-parse --verify -q @{u} >/dev/null || exit 0
+  g=$(git rev-parse --git-dir)
+  rebasing() { test -d "$g/rebase-merge" || test -d "$g/rebase-apply"; }
+  rebasing && exit 0
+  git diff --quiet HEAD || { git merge --ff-only --no-autostash @{u}; exit 0; }
+  git rebase @{u} --no-autostash || { rebasing || exit 0; git rebase --abort; }
+''''
+move-changes = '''
+if git diff --quiet HEAD && test -z "$(git ls-files --others --exclude-standard)"; then
+  wt switch --create {{ to }} --execute sh -- -c \
+    'if [ "$#" -gt 0 ]; then exec "$@"; fi' worktrunk-move {{ args }}
+else
+  git stash push --include-untracked --quiet || exit
+  wt switch --create {{ to }} --execute sh -- -c \
+    'git stash pop --index || exit; if [ "$#" -gt 0 ]; then exec "$@"; fi' worktrunk-move {{ args }}
+fi
+'''
+copy-changes = '''
+if git diff --quiet HEAD && test -z "$(git ls-files --others --exclude-standard)"; then
+  wt switch --create {{ to }} --execute sh -- -c \
+    'if [ "$#" -gt 0 ]; then exec "$@"; fi' worktrunk-move {{ args }}
+else
+  git stash push --include-untracked --quiet || exit
+  git stash apply --index --quiet || exit
+  wt switch --create {{ to }} --execute sh -- -c \
+    'git stash pop --index || exit; if [ "$#" -gt 0 ]; then exec "$@"; fi' worktrunk-move {{ args }}
+fi
+'''
+browser = "open -a 'Firefox Developer Edition' http://localhost:{{ branch | hash_port }}"

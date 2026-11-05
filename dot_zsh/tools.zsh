@@ -36,3 +36,6 @@ _uv_run_mod() {
     fi
 }
 compdef _uv_run_mod uv
+
+# worktrunk shell-completion
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi

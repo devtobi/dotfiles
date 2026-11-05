@@ -33,6 +33,8 @@ brew "bumblebee"
 brew "ccusage"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Defines a standard way of committing rules and communicating it
+brew "commitizen"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Top-like interface for container metrics
@@ -143,6 +145,8 @@ brew "trivy"
 brew "uv"
 # Internet file retriever
 brew "wget"
+# CLI for Git worktree management, designed for parallel AI agent workflows
+brew "worktrunk"
 # Linter for YAML files
 brew "yamllint"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -353,7 +357,6 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "vivaxy.vscode-conventional-commits"
 npm "@antfu/ni"
 npm "bun"
-npm "commitizen"
 npm "corepack"
 npm "dclint"
 npm "kill-port"
