@@ -163,6 +163,8 @@ brew "kaplanelad/tap/shellfirm"
 cask "adguard"
 # Image editing and design software
 cask "affinity"
+# On-device voice dictation
+cask "anomaly-hex"
 # Official eID-Client of the Federal Government of Germany
 cask "ausweisapp"
 # Integrated CAD, CAM, CAE, and PCB software
