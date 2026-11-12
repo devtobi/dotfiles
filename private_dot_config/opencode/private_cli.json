@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "system",
+    "mode": "system"
+  },
+  "animations": true,
+  "cursor": {
+    "style": "default",
+    "blinking": true
+  },
+  "mouse": true,
+  "scroll": {
+    "speed": 1,
+    "acceleration": false
+  },
+  "prompt": {
+    "editor": true,
+    "paste": "full",
+    "image_preview": true
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "submit_scroll": "bottom",
+    "thinking": "hide",
+    "grouping": "auto",
+    "image_preview": false,
+    "tps": true,
+    "markdown": "rendered",
+    "new_location": "launch",
+    "permissions":"prompt"
+  },
+  "tabs": {
+    "mode": "auto",
+    "scope": "cwd",
+    "layout": "vertical",
+    "indicators": "status"
+  },
+  "diffs": {
+    "source": "branch",
+    "wrap": "word",
+    "tree": true,
+    "single": true,
+    "view": "auto"
+  },
+  "attention": {
+    "notifications": true,
+    "sound": true,
+    "volume": 1.0,
+    "sound_pack": "opencode.default"
+  },
+  "highlights": true,
+  "terminal": {
+    "title": true,
+    "copy": "select"
+  },
+  "mini": {
+    "thinking": "hide",
+    "tools": "hide",
+    "shell_output": "hide",
+    "turn_summary": "hide",
+    "footer": "show",
+    "splash": "hide",
+    "work_spinner": "quadrant-orbit",
+    "mono": false,
+    "replay": true,
+    "replay_limit": 200
+  },
+  "keybinds": {},
+  "leader": {},
+  "plugins": [],
+  "experimental": {}
+}
