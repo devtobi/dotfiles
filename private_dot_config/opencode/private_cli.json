@@ -70,5 +70,10 @@
   "keybinds": {},
   "leader": {},
   "plugins": [],
+  "debug": {
+    "devtools": false,
+    "timing": false,
+    "turn_tokens": false
+  },
   "experimental": {}
 }

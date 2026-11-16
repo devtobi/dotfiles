@@ -1,9 +1,59 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  // ==============================================================================
+  // ==================================== Shell ===================================
+  // ==============================================================================
+  "shell": "/bin/zsh",
+  // ==============================================================================
+  // ==================================== Model ===================================
+  // ==============================================================================
+  "model": "opencode-go/deepseek-v4-pro", // Default model if no agent-specific model defined
+  // ==============================================================================
+  // ==================================== Agent ===================================
+  // ==============================================================================
+  "default_agent": "plan", // Default agent selected in the UI
+  // ==============================================================================
+  // =================================== Updates ==================================
+  // ==============================================================================
+  "update": "disable",
+  // ==============================================================================
+  // =================================== Username =================================
+  // ==============================================================================
+  "username": "devtobi",
+  // ==============================================================================
+  // ======================== Permissions (agent-agnostic) ========================
+  // ==============================================================================
+  "permissions": [
+    { "action": "*", "resource": "*", "effect": "deny" }, // default
+    { "action": "read", "resource": "*", "effect": "deny" }, // read a file
+    { "action": "edit", "resource": "*", "effect": "deny" }, // edit files (edit, write, patch)
+    { "action": "glob", "resource": "*", "effect": "deny" }, // globbing of files (using glob pattern)
+    { "action": "grep", "resource": "*", "effect": "deny" }, // grepping of files (using regex)
+    { "action": "shell", "resource": "*", "effect": "deny" }, // execute bash commands
+    { "action": "subagent", "resource": "*", "effect": "deny" }, // start subagents
+    { "action": "skill", "resource": "*", "effect": "deny" }, // load a skill
+    { "action": "question", "resource": "*", "effect": "deny" }, // ask questions to the user
+    { "action": "webfetch", "resource": "*", "effect": "deny" }, // load data from a URL
+    { "action": "websearch", "resource": "*", "effect": "deny" }, // execute web search
+    { "action": "experimental_image_generate", "resource": "*", "effect": "deny" }, // EXPERIMENTAL: image generation
+    { "action": "external_directory", "resource": "*", "effect": "deny" }, // execute tools in external directories
+    { "action": "opencode_list_mcp_resources", "resource": "*", "effect": "deny" }, // list available resources of a MCP server
+    { "action": "opencode_read_mcp_resource", "resource": "*", "effect": "deny" }, // get info of a resource of a MCP server
+    { "action": "execute", "resource": "*", "effect": "deny" }, // control Code Mode, see https://github.com/anomalyco/opencode/blob/dev/packages/codemode/README.md
+    { "action": "todowrite", "resource": "*", "effect": "deny" } // EXPERIMENTAL: create todo lists for tracking task progress, needs experimental.todo
+    // <server>_<tool>: TODO configure permissions for a specific MCP tool
+  ],
   // =====================================================================
+  // ============================ Policies ===============================
+  // =====================================================================
+  "policies": [
+    { "action": "provider.use", "resource": "*", "effect": "deny" },
+    { "action": "provider.use", "resource": "opencode-go", "effect": "allow" },
+    { "action": "provider.use", "resource": "ollama", "effect": "allow" }
+  ],
+  // ==============================================================================
   // ========== Agents (also configurable via .opencode/agents directory) ==========
-  // =====================================================================
-  "default_agent": "plan",
+  // ==============================================================================
   "agents": {
     "title": {
       "description": "Built-in agent: This agent is used for title generation",
@@ -164,9 +214,87 @@
     // TODO Add build agent configuration
   },
   // =====================================================================
+  // ============================== Snapshots ============================
+  // =====================================================================
+  "snapshots": true,
+  // =====================================================================
+  // ============================== Watcher ==============================
+  // =====================================================================
+  "watcher": {
+    "ignore": ["node_modules/**", "dist/**", "target/**", ".git/**", ".idea/**"]
+  },
+  // =====================================================================
+  // ============================= Formatter =============================
+  // =====================================================================
+  "formatter": true, // see https://opencode.ai/docs/formatters
+  // =====================================================================
+  // =============================== Media ===============================
+  // =====================================================================
+  "media": { // see https://opencode.ai/docs/attachments#images
+    "image": {
+      "auto_resize": true,
+      "max_width": 2000,
+      "max_height": 2000,
+      "max_base64_bytes": 5242880
+    }
+  },
+  // =====================================================================
+  // ============================== Output ===============================
+  // =====================================================================
+  "tool_output": {}, // see https://opencode.ai/docs/config/#output
+  // =====================================================================
+  // ============================== Search ===============================
+  // =====================================================================
+  "websearch": { // see https://opencode.ai/docs/websearch
+    "provider": "random"
+  },
+  // =====================================================================
+  // ================ MCP (Model Context Protocol) servers ===============
+  // =====================================================================
+  "mcp": {}, // see https://opencode.ai/docs/mcp-servers
+  // =====================================================================
+  // ============================ Compaction =============================
+  // =====================================================================
+  "compaction": { // see https://opencode.ai/docs/compaction
+    "auto": true
+  },
+  // =====================================================================
+  // ============================= Warming ===============================
+  // =====================================================================
+  "warming": false, // see https://opencode.ai/docs/warming
+  // =====================================================================
+  // ======= Skills (discovery also via .opencode/skills directory) ======
+  // =====================================================================
+  "skills": [],
+  // =====================================================================
+  // ===== Commands (also possible via .opencode/commands directory) =====
+  // =====================================================================
+  "commands": {},
+  // =====================================================================
+  // =========================== Instructions ============================
+  // =====================================================================
+  "instructions": [
+    "CONTRIBUTING.md"
+  ],
+  // =====================================================================
+  // ============================ References =============================
+  // =====================================================================
+  "references": {},
+  // =====================================================================
+  // ============================ Worktrees ==============================
+  // =====================================================================
+  "worktree": {
+    "directory": ".worktrees" // directory in project folder, same config as worktrunk
+  },
+  // =====================================================================
+  // ===== Plugins (local plugins discovered via .opencode/plugins) ======
+  // =====================================================================
+  "plugins": [
+    "opencode-cmux"
+  ],
+  // =====================================================================
   // =================== Providers (and their models)  ===================
   // =====================================================================
-  "model": "opencode-go/deepseek-v4-pro", // Default model if no agent-specific model defined
   "providers": {
     // TODO Add Claude code as a provider
     "opencode-go": {
@@ -214,94 +342,19 @@
     }
   },
   // =====================================================================
-  // =============================== Tools ===============================
-  // =====================================================================
-  "tool_output": {},
-  // =====================================================================
-  // =========================== Instructions ============================
-  // =====================================================================
-  "instructions": [
-    "CONTRIBUTING.md"
-  ],
-  // =====================================================================
-  // ===== Commands (also possible via .opencode/commands directory) =====
-  // =====================================================================
-  "commands": {},
-  // =====================================================================
-  // =================== Permissions (agent-agnostic) ====================
-  // =====================================================================
-  "permissions": [
-    { "action": "*", "resource": "*", "effect": "deny" }, // default
-    { "action": "read", "resource": "*", "effect": "deny" }, // read a file
-    { "action": "edit", "resource": "*", "effect": "deny" }, // edit files (edit, write, patch)
-    { "action": "glob", "resource": "*", "effect": "deny" }, // globbing of files (using glob pattern)
-    { "action": "grep", "resource": "*", "effect": "deny" }, // grepping of files (using regex)
-    { "action": "shell", "resource": "*", "effect": "deny" }, // execute bash commands
-    { "action": "subagent", "resource": "*", "effect": "deny" }, // start subagents
-    { "action": "skill", "resource": "*", "effect": "deny" }, // load a skill
-    { "action": "question", "resource": "*", "effect": "deny" }, // ask questions to the user
-    { "action": "webfetch", "resource": "*", "effect": "deny" }, // load data from a URL
-    { "action": "websearch", "resource": "*", "effect": "deny" }, // execute web search
-    { "action": "experimental_image_generate", "resource": "*", "effect": "deny" }, // EXPERIMENTAL: image generation
-    { "action": "external_directory", "resource": "*", "effect": "deny" }, // execute tools in external directories
-    { "action": "opencode_list_mcp_resources", "resource": "*", "effect": "deny" }, // list available resources of a MCP server
-    { "action": "opencode_read_mcp_resource", "resource": "*", "effect": "deny" }, // get info of a resource of a MCP server
-    { "action": "execute", "resource": "*", "effect": "deny" }, // control Code Mode, see https://github.com/anomalyco/opencode/blob/dev/packages/codemode/README.md
-    { "action": "todowrite", "resource": "*", "effect": "deny" } // EXPERIMENTAL: create todo lists for tracking task progress, needs experimental.todo
-    // <server>_<tool>: TODO configure permissions for a specific MCP tool
-  ],
-  // =====================================================================
-  // ================ MCP (Model Context Protocol) servers ===============
-  // =====================================================================
-  "mcp": {},
-  // =====================================================================
-  // ===== Plugins (local plugins discovered via .opencode/plugins) ======
-  // =====================================================================
-  "plugins": [
-    "opencode-cmux"
-  ],
-  // =====================================================================
-  // ======= Skills (discovery also via .opencode/skills directory) ======
-  // =====================================================================
-  "skills": [],
-  // =====================================================================
   // ========================== Miscellaneous ============================
   // =====================================================================
-  "username": "devtobi",
-  "shell": "/bin/zsh",
-  "formatter": true, // see https://opencode.ai/docs/formatters
-  "lsp": true, // see https://opencode.ai/docs/lsp/
-  "watcher": {
-    "ignore": ["node_modules/**", "dist/**", "target/**", ".git/**", ".idea/**"]
-  },
   "share": "disabled",
-  "update": "disable",
-  // =====================================================================
-  // ============================== Snapshots ============================
-  // =====================================================================
-  "snapshots": true,
-  // =====================================================================
-  // ============================ Compaction =============================
-  // =====================================================================
-  "compaction": {
-    "auto": true
-  },
-  // =====================================================================
-  // ============================ References =============================
-  // =====================================================================
-  "references": {},
-  // =====================================================================
-   // ============================ Policies ==============================
-  // =====================================================================
-  "policies": [
-    { "action": "provider.use", "resource": "*", "effect": "deny" },
-    { "action": "provider.use", "resource": "opencode-go", "effect": "allow" },
-    { "action": "provider.use", "resource": "ollama", "effect": "allow" }
-  ],
   // =====================================================================
   // =========================== EXPERIMENTAL ============================
   // =====================================================================
-  "experimental": {
+  "experimental": { // see https://opencode.ai/docs/config/#experimental
     "todo": true, // enables todolist tool
+    "subagent_depth": 1, // subagents cannot start new subagents
+    "background_compaction": true,
+    "image_generate": {
+      "model": "todo/addmodel"
+    },
+    "location_idle_timeout": "30 minutes"
   }
 }
