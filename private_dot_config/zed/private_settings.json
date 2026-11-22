@@ -7,6 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "instrumentation": {
+    "performance_profiler": {
+      "enabled": false
+    }
+  },
+  "proxy": "",
+  "server_url": "https://zed.dev",
+  "audio": {
+    
+  },
+  "calls": {
+    "share_on_join": false,
+    "mute_on_join": true
+  },
   "git_graph": {
     "date_style": "absolute"
   },
@@ -105,6 +120,11 @@
     "dock": "right"
   },
   "agent": {
+    "threads_sidebar": {
+      "default_width": 480.0,
+      "auto_open": false,
+      "position": "right"
+    },
     "max_content_width": 850.0,
     "limit_content_width": true,
     "button": false,
