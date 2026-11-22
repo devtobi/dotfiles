@@ -105,6 +105,11 @@
     "show_branch_name": true
   },
   "debugger": {
+    "format_dap_log_messages": true,
+    "log_dap_communications": true,
+    "timeout": 2000,
+    "save_breakpoints": false,
+    "stepping_granularity": "line",
     "default_height": 300.0,
     "default_width": 240.0,
     "button": true
@@ -113,6 +118,30 @@
     "button": false
   },
   "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "scroll_multiplier": 1.0,
+    "max_scroll_history_lines": 10000,
+    "scrollbar": {
+      "show": "auto"
+    },
+    "default_width": 480.0,
+    "default_height": 300.0,
+    "open_links_in_mouse_mode": true,
+    "keep_selection_on_copy": false,
+    "copy_on_select": true,
+    "option_as_meta": false,
+    "bell": "system",
+    "minimum_contrast": 45.0,
+    "alternate_scroll": "on",
+    "blinking": "on",
+    "cursor_shape": "bar",
+    "font_weight": 400.0,
+    "font_size": 12.0,
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "working_directory": "current_project_directory",
+    "shell": "system",
     "show_count_badge": true,
     "flexible": false,
     "starts_open": false,
@@ -462,7 +491,7 @@
   },
   "agent_buffer_font_family": "SF Pro",
   "agent_buffer_font_size": 15.0,
-  "agent_ui_font_size": 16.0,
+  "agent_ui_font_size": 15.0,
   "agent_ui_font_family": "SF Pro",
   "ui_font_weight": 400.0,
   "buffer_font_weight": 400.0,
@@ -497,8 +526,8 @@
     "dark": "Catppuccin Frappé",
   },
   "base_keymap": "JetBrains",
-  "ui_font_size": 16.0,
-  "buffer_font_size": 15.0,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
