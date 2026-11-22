@@ -7,6 +7,53 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_graph": {
+    "date_style": "absolute"
+  },
+  "diff_view_style": "split",
+  "git": {
+    "show_stage_restore_buttons": true,
+    "path_style": "file_name_first",
+    "diff_base": "head",
+    "hunk_style": "staged_hollow",
+    "file_diff": {
+      "show_full_file": true
+    },
+    "commit_view": {
+      "expand_files": true,
+      "expand_description": true
+    },
+    "stash_picker": {
+      "date_style": "relative"
+    },
+    "branch_picker": {
+      "show_author_name": true,
+      "date_style": "relative"
+    },
+    "blame": {
+      "date_style": "relative",
+      "show_avatar": true
+    },
+    "inline_blame": {
+      "show_commit_summary": true,
+      "min_column": 0,
+      "padding": 7,
+      "delay_ms": 0,
+      "location": "status_bar",
+      "enabled": true,
+      "date_style": "relative"
+    },
+    "gutter_debounce": 0,
+    "git_gutter": "tracked_files",
+    "auto_fetch": {
+      "interval_secs": 900,
+      "enabled": true
+    },
+    "enable_diff": true,
+    "enable_status": true,
+    "disable_git": false,
+    "date_format": "locale"
+  },
   "close_panel_on_toggle": false,
   "zoomed_padding": true,
   "active_pane_modifiers": {
