@@ -18,6 +18,5 @@ alias python="python3"
 # alias npm="npmc"
 # alias pnpm="npmc --pnpm-alias"
 # alias bun="npmc --bun-alias"
-alias code="codium"
 
 alias wtoc="wt switch --create --execute=opencode"

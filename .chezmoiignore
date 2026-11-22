@@ -136,6 +136,8 @@ Brewfile.lock.json
 .config/.wrangler
 .config/yarn
 .config/Autodesk
+.config/zed/themes
+.config/zed/prompts
 .ssh/agent
 .ssh/authorized_keys
 .ssh/id_*

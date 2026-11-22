@@ -17,6 +17,8 @@ brew "sqlite"
 brew "xz"
 # Browser automation CLI for AI agents
 brew "agent-browser"
+# Native desktop automation CLI for AI agents
+brew "agent-desktop"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
 # Automation for Apps
@@ -173,7 +175,7 @@ cask "autodesk-fusion"
 cask "bambu-studio"
 # Menu bar icon organiser
 cask "bartender"
-# Desktop password and login vault
+# Open source desktop password manager with encrypted vault and autofilling
 cask "bitwarden"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
@@ -298,8 +300,6 @@ cask "voiceink"
 cask "voicemod"
 # Menu bar toolkit with keep-awake, system monitor and volume mixer
 cask "vorssaint"
-# Binary releases of VS Code without MS branding/telemetry/licensing
-cask "vscodium"
 # Video communication and virtual meeting platform
 cask "webex"
 # JavaScript IDE
@@ -308,6 +308,8 @@ cask "webstorm"
 cask "whatsapp"
 # Full-featured companion app to the YubiKey
 cask "yubico-authenticator"
+# Multiplayer code editor
+cask "zed"
 mas "Cascadea", id: 1432182561
 mas "Compressor", id: 424390742
 mas "Cursor Pro", id: 1447043133
@@ -339,24 +341,6 @@ mas "VPN Unlimited®", id: 694633015
 mas "WalkingMate", id: 6754256683
 mas "WaterMinder", id: 1415257369
 mas "Xcode", id: 497799835
-vscode "ban.spellright"
-vscode "catppuccin.catppuccin-vsc"
-vscode "catppuccin.catppuccin-vsc-icons"
-vscode "circledev.glsl-canvas"
-vscode "continue.continue"
-vscode "formulahendry.auto-close-tag"
-vscode "formulahendry.auto-complete-tag"
-vscode "formulahendry.auto-rename-tag"
-vscode "mikestead.dotenv"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-docker"
-vscode "oderwat.indent-rainbow"
-vscode "raczzalan.webgl-glsl-editor"
-vscode "redhat.vscode-yaml"
-vscode "seatonjiang.gitmoji-vscode"
-vscode "shardulm94.trailing-spaces"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "vivaxy.vscode-conventional-commits"
 npm "@antfu/ni"
 npm "bun"
 npm "corepack"
