@@ -7,7 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "disable_ai": true,
+  "show_edit_predictions": true,
+  "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "ollama/gemma4:12b-mlx",
+        "mode": "build"
+      },
+      "type": "registry"
+    }
+  },
+  "disable_ai": false,
   "instrumentation": {
     "performance_profiler": {
       "enabled": false
@@ -120,6 +130,42 @@
     "dock": "right"
   },
   "agent": {
+    "max_idle_retained_threads": 5,
+    "terminal_init_command": "opencode",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b",
+      "enable_thinking": false
+    },
+    "auto_compact": {
+      "threshold": "90%",
+      "enabled": true
+    },
+    "auto_generate_thread_titles": true,
+    "show_merge_conflict_indicator": true,
+    "show_turn_stats": true,
+    "message_editor_min_lines": 4,
+    "use_modifier_to_send": false,
+    "cancel_generation_on_terminal_stop": true,
+    "thinking_display": "always_collapsed",
+    "expand_terminal_card": true,
+    "expand_edit_card": true,
+    "prevent_idle_sleep": true,
+    "play_sound_when_agent_done": "always",
+    "notify_when_agent_waiting": "primary_screen",
+    "enable_feedback": false,
+    "single_file_review": true,
+    "tool_permissions": {
+      "default": "deny",
+      "tools": {}
+    },
+    "sandbox_permissions": {
+      "warn_ntfs_grants": true,
+      "warn_confusable_unicode": true,
+      "allow_fs_write_all": false,
+      "allow_all_hosts": false,
+      "allow_unsandboxed": false
+    },
     "threads_sidebar": {
       "default_width": 480.0,
       "auto_open": false,
@@ -127,7 +173,7 @@
     },
     "max_content_width": 850.0,
     "limit_content_width": true,
-    "button": false,
+    "button": true,
     "default_width": 480.0,
     "default_height": 300.0,
     "flexible": false,
@@ -182,6 +228,15 @@
     "button": true
   },
   "edit_predictions": {
+    "mode": "eager",
+    "allow_data_collection": "no",
+    "ollama": {
+      "prediction_debounce": 0,
+      "max_output_tokens": 64,
+      "prompt_format": "infer",
+      "model": "qwen2.5-coder:7b"
+    },
+    "provider": "ollama",
     "button": false
   },
   "terminal": {
