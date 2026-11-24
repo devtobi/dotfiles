@@ -35,12 +35,29 @@
     { "action": "question", "resource": "*", "effect": "deny" }, // ask questions to the user
     { "action": "webfetch", "resource": "*", "effect": "deny" }, // load data from a URL
     { "action": "websearch", "resource": "*", "effect": "deny" }, // execute web search
-    { "action": "experimental_image_generate", "resource": "*", "effect": "deny" }, // EXPERIMENTAL: image generation
+    {
+      "action": "experimental_image_generate",
+      "resource": "*",
+      "effect": "deny",
+    }, // EXPERIMENTAL: image generation
+    {
+      "action": "experimental_video_generate",
+      "resource": "*",
+      "effect": "deny",
+    }, // EXPERIMENTAL: video generation
     { "action": "external_directory", "resource": "*", "effect": "deny" }, // execute tools in external directories
-    { "action": "opencode_list_mcp_resources", "resource": "*", "effect": "deny" }, // list available resources of a MCP server
-    { "action": "opencode_read_mcp_resource", "resource": "*", "effect": "deny" }, // get info of a resource of a MCP server
+    {
+      "action": "opencode_list_mcp_resources",
+      "resource": "*",
+      "effect": "deny",
+    }, // list available resources of a MCP server
+    {
+      "action": "opencode_read_mcp_resource",
+      "resource": "*",
+      "effect": "deny",
+    }, // get info of a resource of a MCP server
     { "action": "execute", "resource": "*", "effect": "deny" }, // control Code Mode, see https://github.com/anomalyco/opencode/blob/dev/packages/codemode/README.md
-    { "action": "todowrite", "resource": "*", "effect": "deny" } // EXPERIMENTAL: create todo lists for tracking task progress, needs experimental.todo
+    { "action": "todowrite", "resource": "*", "effect": "deny" }, // EXPERIMENTAL: create todo lists for tracking task progress, needs experimental.todo
     // <server>_<tool>: TODO configure permissions for a specific MCP tool
   ],
   // =====================================================================
@@ -49,7 +66,7 @@
   "policies": [
     { "action": "provider.use", "resource": "*", "effect": "deny" },
     { "action": "provider.use", "resource": "opencode-go", "effect": "allow" },
-    { "action": "provider.use", "resource": "ollama", "effect": "allow" }
+    { "action": "provider.use", "resource": "ollama", "effect": "allow" },
   ],
   // ==============================================================================
   // ========== Agents (also configurable via .opencode/agents directory) ==========
@@ -73,12 +90,29 @@
         { "action": "subagent", "resource": "*", "effect": "ask" },
         { "action": "skill", "resource": "*", "effect": "allow" },
         { "action": "question", "resource": "*", "effect": "allow" },
-        { "action": "webfetch", "resource": "*", "effect": "allow" },
-        { "action": "websearch", "resource": "*", "effect": "allow" },
-        { "action": "experimental_image_generate", "resource": "*", "effect": "allow" },
+        { "action": "webfetch", "resource": "*", "effect": "ask" },
+        { "action": "websearch", "resource": "*", "effect": "ask" },
+        {
+          "action": "experimental_image_generate",
+          "resource": "*",
+          "effect": "ask",
+        },
+        {
+          "action": "experimental_video_generate",
+          "resource": "*",
+          "effect": "ask",
+        },
         { "action": "external_directory", "resource": "*", "effect": "ask" },
-        { "action": "opencode_list_mcp_resources", "resource": "*", "effect": "allow" },
-        { "action": "opencode_read_mcp_resource", "resource": "*", "effect": "allow" },
+        {
+          "action": "opencode_list_mcp_resources",
+          "resource": "*",
+          "effect": "allow",
+        },
+        {
+          "action": "opencode_read_mcp_resource",
+          "resource": "*",
+          "effect": "allow",
+        },
         { "action": "execute", "resource": "*", "effect": "ask" },
         { "action": "todowrite", "resource": "*", "effect": "allow" },
         // shell commands
@@ -137,8 +171,16 @@
         { "action": "shell", "resource": "git reflog *", "effect": "allow" },
         { "action": "shell", "resource": "git remote *", "effect": "allow" },
         { "action": "shell", "resource": "git tag *", "effect": "allow" },
-        { "action": "shell", "resource": "git stash list *", "effect": "allow" },
-        { "action": "shell", "resource": "git config --get *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "git stash list *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "git config --get *",
+          "effect": "allow",
+        },
 
         // Process / system inspection
         { "action": "shell", "resource": "ps *", "effect": "allow" },
@@ -158,23 +200,67 @@
         { "action": "shell", "resource": "uptime *", "effect": "allow" },
 
         // Language / runtime version inspection
-        { "action": "shell", "resource": "node --version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "node --version *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "npm --version *", "effect": "allow" },
-        { "action": "shell", "resource": "yarn --version *", "effect": "allow" },
-        { "action": "shell", "resource": "pnpm --version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "yarn --version *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "pnpm --version *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "bun --version *", "effect": "allow" },
         { "action": "shell", "resource": "uv --version *", "effect": "allow" },
-        { "action": "shell", "resource": "python --version *", "effect": "allow" },
-        { "action": "shell", "resource": "python3 --version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "python --version *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "python3 --version *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "pip --version *", "effect": "allow" },
-        { "action": "shell", "resource": "pip3 --version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "pip3 --version *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "sdk version *", "effect": "allow" },
-        { "action": "shell", "resource": "java --version *", "effect": "allow" },
-        { "action": "shell", "resource": "javac --version *", "effect": "allow" },
-        { "action": "shell", "resource": "kotlin -version *", "effect": "allow" },
-        { "action": "shell", "resource": "kotlinc -version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "java --version *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "javac --version *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "kotlin -version *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "kotlinc -version *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "mvn --version *", "effect": "allow" },
-        { "action": "shell", "resource": "gradle --version *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "gradle --version *",
+          "effect": "allow",
+        },
 
         // Dependency inspection
         { "action": "shell", "resource": "npm list *", "effect": "allow" },
@@ -184,8 +270,16 @@
         { "action": "shell", "resource": "uv pip list *", "effect": "allow" },
         { "action": "shell", "resource": "pip list *", "effect": "allow" },
         { "action": "shell", "resource": "pip3 list *", "effect": "allow" },
-        { "action": "shell", "resource": "mvn dependency:tree *", "effect": "allow" },
-        { "action": "shell", "resource": "gradle dependencies *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "mvn dependency:tree *",
+          "effect": "allow",
+        },
+        {
+          "action": "shell",
+          "resource": "gradle dependencies *",
+          "effect": "allow",
+        },
 
         // Archive inspection
         { "action": "shell", "resource": "tar -tf *", "effect": "allow" },
@@ -201,15 +295,23 @@
         // Containers
         { "action": "shell", "resource": "docker ps *", "effect": "allow" },
         { "action": "shell", "resource": "docker images *", "effect": "allow" },
-        { "action": "shell", "resource": "docker compose ps *", "effect": "allow" },
+        {
+          "action": "shell",
+          "resource": "docker compose ps *",
+          "effect": "allow",
+        },
         { "action": "shell", "resource": "kubectl get *", "effect": "allow" },
-        { "action": "shell", "resource": "kubectl describe *", "effect": "allow" }
+        {
+          "action": "shell",
+          "resource": "kubectl describe *",
+          "effect": "allow",
+        },
       ],
       // steps: 0, // see https://opencode.ai/docs/agents/#steps
       "hidden": false,
       "color": "#03fc1c",
       "disabled": false,
-      "request": {} // see https://opencode.ai/docs/agents/#request
+      "request": {}, // see https://opencode.ai/docs/agents/#request
     },
     // TODO Add build agent configuration
   },
@@ -221,7 +323,13 @@
   // ============================== Watcher ==============================
   // =====================================================================
   "watcher": {
-    "ignore": ["node_modules/**", "dist/**", "target/**", ".git/**", ".idea/**"]
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      "target/**",
+      ".git/**",
+      ".idea/**",
+    ],
   },
   // =====================================================================
   // ============================= Formatter =============================
@@ -230,13 +338,14 @@
   // =====================================================================
   // =============================== Media ===============================
   // =====================================================================
-  "media": { // see https://opencode.ai/docs/attachments#images
+  "media": {
+    // see https://opencode.ai/docs/attachments#images
     "image": {
       "auto_resize": true,
       "max_width": 2000,
       "max_height": 2000,
-      "max_base64_bytes": 5242880
-    }
+      "max_base64_bytes": 5242880,
+    },
   },
   // =====================================================================
   // ============================== Output ===============================
@@ -245,8 +354,9 @@
   // =====================================================================
   // ============================== Search ===============================
   // =====================================================================
-  "websearch": { // see https://opencode.ai/docs/websearch
-    "provider": "random"
+  "websearch": {
+    // see https://opencode.ai/docs/websearch
+    "provider": "random",
   },
   // =====================================================================
   // ================ MCP (Model Context Protocol) servers ===============
@@ -255,8 +365,10 @@
   // =====================================================================
   // ============================ Compaction =============================
   // =====================================================================
-  "compaction": { // see https://opencode.ai/docs/compaction
-    "auto": true
+  "compaction": {
+    // see https://opencode.ai/docs/compaction
+    "auto": true,
+    "background": true,
   },
   // =====================================================================
   // ============================= Warming ===============================
@@ -273,9 +385,7 @@
   // =====================================================================
   // =========================== Instructions ============================
   // =====================================================================
-  "instructions": [
-    "CONTRIBUTING.md"
-  ],
+  "instructions": ["CONTRIBUTING.md"],
   // =====================================================================
   // ============================ References =============================
   // =====================================================================
@@ -284,14 +394,12 @@
   // ============================ Worktrees ==============================
   // =====================================================================
   "worktree": {
-    "directory": ".worktrees" // directory in project folder, same config as worktrunk
+    "directory": ".worktrees", // directory in project folder, same config as worktrunk
   },
   // =====================================================================
   // ===== Plugins (local plugins discovered via .opencode/plugins) ======
   // =====================================================================
-  "plugins": [
-    "opencode-cmux"
-  ],
+  "plugins": ["opencode-cmux"],
   // =====================================================================
   // =================== Providers (and their models)  ===================
   // =====================================================================
@@ -301,12 +409,12 @@
       "name": "OpenCode Go (Subscription)",
       "settings": {
         "chunkTimeout": 2000,
-        "timeout": 60000
+        "timeout": 60000,
       },
       "compatibility": {
-        "supportsPromptCacheKey": true
+        "supportsPromptCacheKey": true,
       },
-       "models": {} // TODO Add only relevant models
+      "models": {}, // TODO Add only relevant models
     },
     "ollama": {
       "name": "Ollama (Local)",
@@ -314,10 +422,10 @@
       "settings": {
         "baseURL": "http://localhost:11434/v1",
         "chunkTimeout": 2000,
-        "timeout": 30000
+        "timeout": 30000,
       },
       "compatibility": {
-        "supportsPromptCacheKey": false
+        "supportsPromptCacheKey": false,
       },
       "models": {
         "qwen3.8:27b-mlx": {
@@ -326,35 +434,40 @@
           "limit": {
             "input": 262144,
             "output": 262144,
-            "context": 262144
+            "context": 262144,
           },
           "capabilities": {
             "tools": true,
             "input": ["text", "image", "video", "pdf"],
             "output": ["text"],
             "reasoning": {
-              "supported": true
+              "supported": true,
             },
-            "temperature": true
-          }
-        }
-      }
-    }
+            "temperature": true,
+          },
+        },
+      },
+    },
   },
   // =====================================================================
   // ========================== Miscellaneous ============================
   // =====================================================================
   "share": "disabled",
+  "timezone": "Europe/Berlin",
+  "automations": true,
   // =====================================================================
   // =========================== EXPERIMENTAL ============================
   // =====================================================================
-  "experimental": { // see https://opencode.ai/docs/config/#experimental
+  "experimental": {
+    // see https://opencode.ai/docs/config/#experimental
     "todo": true, // enables todolist tool
     "subagent_depth": 1, // subagents cannot start new subagents
-    "background_compaction": true,
     "image_generate": {
-      "model": "todo/addmodel"
+      "model": "todo/addmodel",
     },
-    "location_idle_timeout": "30 minutes"
-  }
+    "video_generate": {
+      "model": "todo/addmodel",
+    },
+    "location_idle_timeout": "30 minutes",
+  },
 }

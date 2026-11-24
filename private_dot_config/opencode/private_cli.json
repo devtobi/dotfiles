@@ -29,7 +29,7 @@
     "tps": true,
     "markdown": "rendered",
     "new_location": "launch",
-    "permissions":"prompt"
+    "permissions": "prompt"
   },
   "tabs": {
     "mode": "auto",

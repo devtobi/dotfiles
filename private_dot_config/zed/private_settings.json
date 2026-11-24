@@ -12,28 +12,26 @@
     "opencode": {
       "default_config_options": {
         "model": "ollama/gemma4:12b-mlx",
-        "mode": "build"
+        "mode": "build",
       },
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "disable_ai": false,
   "instrumentation": {
     "performance_profiler": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "proxy": "",
   "server_url": "https://zed.dev",
-  "audio": {
-    
-  },
+  "audio": {},
   "calls": {
     "share_on_join": false,
-    "mute_on_join": true
+    "mute_on_join": true,
   },
   "git_graph": {
-    "date_style": "absolute"
+    "date_style": "absolute",
   },
   "diff_view_style": "split",
   "git": {
@@ -42,22 +40,22 @@
     "diff_base": "head",
     "hunk_style": "staged_hollow",
     "file_diff": {
-      "show_full_file": true
+      "show_full_file": true,
     },
     "commit_view": {
       "expand_files": true,
-      "expand_description": true
+      "expand_description": true,
     },
     "stash_picker": {
-      "date_style": "relative"
+      "date_style": "relative",
     },
     "branch_picker": {
       "show_author_name": true,
-      "date_style": "relative"
+      "date_style": "relative",
     },
     "blame": {
       "date_style": "relative",
-      "show_avatar": true
+      "show_avatar": true,
     },
     "inline_blame": {
       "show_commit_summary": true,
@@ -66,24 +64,24 @@
       "delay_ms": 0,
       "location": "status_bar",
       "enabled": true,
-      "date_style": "relative"
+      "date_style": "relative",
     },
     "gutter_debounce": 0,
     "git_gutter": "tracked_files",
     "auto_fetch": {
       "interval_secs": 900,
-      "enabled": true
+      "enabled": true,
     },
     "enable_diff": true,
     "enable_status": true,
     "disable_git": false,
-    "date_format": "locale"
+    "date_format": "locale",
   },
   "close_panel_on_toggle": false,
   "zoomed_padding": true,
   "active_pane_modifiers": {
     "border_size": 0.0,
-    "inactive_opacity": 1.0
+    "inactive_opacity": 1.0,
   },
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
@@ -94,11 +92,11 @@
   "window_title_format": "${projectName}${separator}${fileName}",
   "focus_follows_mouse": {
     "debounce_ms": 250,
-    "enabled": true
+    "enabled": true,
   },
   "centered_layout": {
     "right_padding": 0.2,
-    "left_padding": 0.2
+    "left_padding": 0.2,
   },
   "bottom_dock_layout": "contained",
   "preview_tabs": {
@@ -108,7 +106,7 @@
     "enable_preview_from_multibuffer": true,
     "enable_preview_from_file_finder": false,
     "enable_preview_from_project_panel": true,
-    "enabled": true
+    "enabled": true,
   },
   "tabs": {
     "show_close_button": "hover",
@@ -116,18 +114,18 @@
     "activate_on_close": "neighbour",
     "close_position": "right",
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
   "tab_bar": {
     "show_pinned_tabs_in_separate_row": false,
     "show_tab_bar_buttons": false,
     "show_nav_history_buttons": false,
-    "show": true
+    "show": true,
   },
   "collaboration_panel": {
     "button": false,
     "default_width": 240.0,
-    "dock": "right"
+    "dock": "right",
   },
   "agent": {
     "max_idle_retained_threads": 5,
@@ -135,11 +133,11 @@
     "default_model": {
       "provider": "ollama",
       "model": "qwen2.5-coder:7b",
-      "enable_thinking": false
+      "enable_thinking": false,
     },
     "auto_compact": {
       "threshold": "90%",
-      "enabled": true
+      "enabled": true,
     },
     "auto_generate_thread_titles": true,
     "show_merge_conflict_indicator": true,
@@ -157,19 +155,19 @@
     "single_file_review": true,
     "tool_permissions": {
       "default": "deny",
-      "tools": {}
+      "tools": {},
     },
     "sandbox_permissions": {
       "warn_ntfs_grants": true,
       "warn_confusable_unicode": true,
       "allow_fs_write_all": false,
       "allow_all_hosts": false,
-      "allow_unsandboxed": false
+      "allow_unsandboxed": false,
     },
     "threads_sidebar": {
       "default_width": 480.0,
       "auto_open": false,
-      "position": "right"
+      "position": "right",
     },
     "max_content_width": 850.0,
     "limit_content_width": true,
@@ -179,13 +177,13 @@
     "flexible": false,
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "git_panel": {
     "commit_title_max_length": 0,
     "show_count_badge": true,
     "scrollbar": {
-      "show": "auto"
+      "show": "auto",
     },
     "commit_editor": "expanded",
     "entry_primary_click_action": "file_diff",
@@ -202,7 +200,7 @@
     "starts_open": false,
     "date_style": "relative",
     "button": true,
-    "dock": "left"
+    "dock": "left",
   },
   "title_bar": {
     "open_menus_on_hover": false,
@@ -215,7 +213,7 @@
     "show_project_items": true,
     "show_worktree_name": true,
     "show_branch_status_icon": true,
-    "show_branch_name": true
+    "show_branch_name": true,
   },
   "debugger": {
     "format_dap_log_messages": true,
@@ -225,7 +223,7 @@
     "stepping_granularity": "line",
     "default_height": 300.0,
     "default_width": 240.0,
-    "button": true
+    "button": true,
   },
   "edit_predictions": {
     "mode": "eager",
@@ -234,19 +232,19 @@
       "prediction_debounce": 0,
       "max_output_tokens": 64,
       "prompt_format": "infer",
-      "model": "qwen2.5-coder:7b"
+      "model": "qwen2.5-coder:7b",
     },
     "provider": "ollama",
-    "button": false
+    "button": false,
   },
   "terminal": {
     "toolbar": {
-      "breadcrumbs": false
+      "breadcrumbs": false,
     },
     "scroll_multiplier": 1.0,
     "max_scroll_history_lines": 10000,
     "scrollbar": {
-      "show": "auto"
+      "show": "auto",
     },
     "default_width": 480.0,
     "default_height": 300.0,
@@ -268,7 +266,7 @@
     "flexible": false,
     "starts_open": false,
     "dock": "bottom",
-    "button": true
+    "button": true,
   },
   "status_bar": {
     "show_active_file": false,
@@ -276,13 +274,13 @@
     "line_endings_button": true,
     "cursor_position_button": true,
     "active_encoding_button": "enabled",
-    "active_language_button": true
+    "active_language_button": true,
   },
   "project_panel": {
     "auto_open": {
       "on_drop": true,
       "on_paste": true,
-      "on_create": true
+      "on_create": true,
     },
     "sort_order": "default",
     "sort_mode": "directories_first",
@@ -290,7 +288,7 @@
     "hide_root": true,
     "drag_and_drop": true,
     "indent_guides": {
-      "show": "always"
+      "show": "always",
     },
     "sticky_scroll": true,
     "git_status_indicator": false,
@@ -298,7 +296,7 @@
     "show_diagnostics": "all",
     "scrollbar": {
       "horizontal_scroll": false,
-      "show": "auto"
+      "show": "auto",
     },
     "bold_folder_labels": false,
     "auto_fold_dirs": false,
@@ -313,7 +311,7 @@
     "hide_gitignore": false,
     "title_tooltip_delay": "disabled",
     "dock": "left",
-    "button": true
+    "button": true,
   },
   "close_on_file_delete": true,
   "restore_on_file_reopen": true,
@@ -323,12 +321,13 @@
     "prefill_query_from_selection": true,
     "skip_focus_for_active_in_search": true,
     "include_ignored": "indexed",
-    "file_icons": true
+    "file_icons": true,
+    "modal_max_width": "medium",
   },
   "command_palette": {
-    "use_command_history": true
+    "use_command_history": true,
   },
-  "seed_search_query_from_cursor": "always",
+  "seed_search_query_from_cursor": "selection",
   "search_wrap": true,
   "use_smartcase_search": true,
   "search": {
@@ -338,26 +337,26 @@
     "regex": false,
     "include_ignored": false,
     "case_sensitive": false,
-    "whole_word": false
+    "whole_word": false,
   },
   "lsp_highlight_debounce": 75,
   "diagnostics": {
     "button": true,
     "lsp_pull_diagnostics": {
       "debounce_ms": 50,
-      "enabled": true
+      "enabled": true,
     },
     "inline": {
       "min_column": 0,
       "padding": 4,
       "update_debounce_ms": 150,
-      "enabled": true
+      "enabled": true,
     },
-    "include_warnings": true
+    "include_warnings": true,
   },
   "diagnostics_max_severity": "all",
   "prettier": {
-    "allowed": true
+    "allowed": true,
   },
   "document_symbols": "on",
   "document_folding_ranges": "on",
@@ -429,6 +428,7 @@
   "soft_wrap_indent": "extra_one",
   "soft_wrap": "none",
   "auto_indent": "syntax_aware",
+  "auto_indent_on_paste": true,
   "hard_tabs": false,
   "tab_size": 4,
   "vim": {
@@ -495,7 +495,7 @@
   "outline_panel": {
     "multi_buffer_hide_symbols": false,
     "indent_guides": {
-      "show": "always"
+      "show": "always",
     },
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
@@ -525,7 +525,7 @@
       "vertical": true,
       "horizontal": true,
     },
-    "show": "system",
+    "show": "auto",
   },
   "autosave": "on_window_change",
   "helix_mode": false,
@@ -654,5 +654,37 @@
     "mode": "system",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Frappé",
+  },
+  "theme_overrides": {
+    "Catppuccin Latte": {
+      "border.variant": "#EEF1F5",
+      "border": "#EEF1F5",
+      "title_bar.background": "#EEF1F5",
+      "tab_bar.background": "#EEF1F5",
+      "tab.active_background": "#E2E6EB",
+      "tab.inactive_background": "#EEF1F5",
+      "panel.background": "#EEF1F5",
+      "panel.focused_border": "#EEF1F5",
+      "scrollbar.track.background": "#EEF1F5",
+      "scrollbar.track.border": "#EEF1F5",
+      "scrollbar.thumb.background": "#E2E6EB",
+      "scrollbar.thumb.active_background": "#E2E6EB",
+      "scrollbar.thumb.hover_background": "#E2E6EB",
+    },
+    "Catppuccin Frappé": {
+      "border.variant": "#303446",
+      "border": "#303446",
+      "title_bar.background": "#303446",
+      "tab_bar.background": "#303446",
+      "tab.active_background": "#3A3F54",
+      "tab.inactive_background": "#303446",
+      "panel.background": "#303446",
+      "panel.focused_border": "#3F4559",
+      "scrollbar.track.background": "#303446",
+      "scrollbar.track.border": "#303446",
+      "scrollbar.thumb.background": "#3A3F54",
+      "scrollbar.thumb.active_background": "#3A3F54",
+      "scrollbar.thumb.hover_background": "#3A3F54",
+    },
   },
 }
