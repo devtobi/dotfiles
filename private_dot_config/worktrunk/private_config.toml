@@ -27,7 +27,7 @@ copy = "wt step copy-ignored"
 stage = "all"
 
 [commit.generation]
-command = "opencode run -m anthropic/claude-haiku-5-5 --variant fast"
+command = "ollama run qwen2.5-coder:7b"
 template-append = """
 - Explain the rationale in the body, not just the change
 - Reference the related issue ID in the body
